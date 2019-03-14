@@ -18,7 +18,7 @@ namespace game_framework {
 
 	void CMap::LoadBitmap()
 	{
-		map.LoadBitmap(SCROLLINGTEST);
+		map.LoadBitmap(SCROLLINGTEST, RGB(255, 255, 255));
 	}
 
 	void CMap::SetXY(int nx, int ny)
@@ -29,12 +29,25 @@ namespace game_framework {
 
 	void CMap::OnMove()
 	{
-		map.SetTopLeft(x,y);
-		map.ShowBitmap();
+		if (isMovingLeft == true) x -= 5;
+		if (isMovingRight == true) x += 5;
+
 	}
+
+	void CMap::SrollingRight(bool flag) 
+	{
+		isMovingRight = flag;
+	}
+
+	void CMap::SrollingLeft(bool flag)
+	{
+		isMovingLeft = flag;
+	}
+
 
 	void CMap::OnShow() 
 	{
-	
+		map.SetTopLeft(x, y);
+		map.ShowBitmap();
 	}
 }

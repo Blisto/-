@@ -213,9 +213,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 	//
 	// SetCursor(AfxGetApp()->LoadCursor(IDC_GAMECURSOR));
 	//
-	int x = 0, y = 0;
-	MAP.SetXY(0+y, 0+y);
-	y++;
+	MAP.OnMove();
 
 
 }
@@ -254,9 +252,9 @@ void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 	const char KEY_UP    = 0x26; // keyboard上箭頭
 	const char KEY_RIGHT = 0x27; // keyboard右箭頭
 	const char KEY_DOWN  = 0x28; // keyboard下箭頭
-	if (nChar == KEY_LEFT)
-	if (nChar == KEY_RIGHT)
-	if (nChar == KEY_UP)
+	if (nChar == KEY_LEFT)MAP.SrollingLeft(true);
+	if (nChar == KEY_RIGHT)MAP.SrollingRight(true);
+	if (nChar == KEY_UP) {}
 		if (nChar == KEY_DOWN) {}
 }
 
@@ -266,9 +264,9 @@ void CGameStateRun::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
 	const char KEY_UP    = 0x26; // keyboard上箭頭
 	const char KEY_RIGHT = 0x27; // keyboard右箭頭
 	const char KEY_DOWN  = 0x28; // keyboard下箭頭
-	if (nChar == KEY_LEFT)
-	if (nChar == KEY_RIGHT)
-	if (nChar == KEY_UP)
+	if (nChar == KEY_LEFT)MAP.SrollingLeft(false);
+	if (nChar == KEY_RIGHT)MAP.SrollingRight(false);
+		if (nChar == KEY_UP) {}
 		if (nChar == KEY_DOWN) {}
 }
 
