@@ -14,6 +14,8 @@ namespace game_framework {
 	{
 		x = 0;
 		y = 0;
+		isMovingRight = false;
+		isMovingLeft = false;
 	}
 
 	void CMap::LoadBitmap()
