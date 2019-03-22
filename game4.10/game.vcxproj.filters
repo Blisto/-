@@ -195,5 +195,9 @@
     <Image Include="RES\map01.bmp">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="RES\dog1.png" />
+    <Image Include="RES\dog1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

@@ -98,6 +98,7 @@ namespace game_framework {
 		CMovingBitmap	corner;		// 角落圖
 		CInteger		hits_left;	// 剩下的撞擊數
 		CMap MAP;
+		CGameCharacter *testing_dog;
 	};
 
 	/////////////////////////////////////////////////////////////////////////////

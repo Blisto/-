@@ -107,7 +107,7 @@
       <ObjectFileName>.\Debug/</ObjectFileName>
       <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
     </ClCompile>
@@ -328,6 +328,8 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\bitmap3.bmp" />
+    <Image Include="RES\dog1.bmp" />
+    <Image Include="RES\dog1.png" />
     <Image Include="RES\map01.bmp" />
     <Image Include="RES\SrollingTestMap.bmp" />
   </ItemGroup>

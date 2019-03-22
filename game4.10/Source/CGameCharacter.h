@@ -12,8 +12,10 @@ namespace game_framework
 		void setMovingDown(bool flag);
 		void setMovingJump(bool flag);
 		int getHP();
+		int getX();
+		int getY();
 		void setHP(int newHP);
-		bool isHit(int x1, int y1, int x2, int y2);
+		//bool isHit(int x1, int y1, int x2, int y2);
 		//void Attacking();
 		//void Shooting();
 		void SetXY(int nx, int ny);

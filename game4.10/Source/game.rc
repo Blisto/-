@@ -108,7 +108,9 @@ SCROLLINGTEST           BITMAP                  "..\\res\\SrollingTestMap.bmp"
 
 IDB_BITMAP3             BITMAP                  "..\\res\\bitmap3.bmp"
 
-MAP01                   BITMAP                  "C:\\Users\\User\\Desktop\\2019OOPProject\\game4.10\\RES\\map01.bmp"
+MAP01                   BITMAP                  "..\\res\\map01.bmp"
+
+TestDog                 BITMAP                  "..\\res\\dog1.bmp"
 
 
 /////////////////////////////////////////////////////////////////////////////

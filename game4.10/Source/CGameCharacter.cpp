@@ -11,8 +11,8 @@ namespace game_framework
 	CGameCharacter::CGameCharacter() 
 	{
 		healthPoints = 0;
-		x = 0;
-		y = 0;
+		x = 135;
+		y = 455;
 		isMovingRight = false;
 		isMovingLeft = false;
 		isMovingUp = false;
@@ -22,7 +22,7 @@ namespace game_framework
 
 	void CGameCharacter::LoadBitmap() 
 	{
-	
+		character.LoadBitmap(TestDog, RGB(255, 255, 255));
 	}
 
 	void CGameCharacter::setMovingRight(bool flag)
@@ -55,6 +55,15 @@ namespace game_framework
 		return healthPoints;
 	}
 
+	int CGameCharacter::getX()
+	{
+		return x;
+	}
+
+	int CGameCharacter::getY()
+	{
+		return y;
+	}
 	void CGameCharacter::setHP(int newHP) 
 	{
 		healthPoints = newHP;
@@ -68,12 +77,17 @@ namespace game_framework
 
 	void CGameCharacter::OnMove() 
 	{
-	
+		if (isMovingUp == true) { y -= 5; }
+		if (isMovingDown == true) { y += 5; }
+		if (isMovingRight == true) { x += 5; }
+		if (isMovingLeft == true) { x -= 5; }
 	}
 
 	void CGameCharacter::OnShow() 
 	{
-		//////setTopLeft
-		//////ShowBitmap
+		character.SetTopLeft(x, y);
+		character.ShowBitmap();
+		//TRACE("NOW dog is in X=%d and Y=%d", this->x, this->y);
+
 	}
 }

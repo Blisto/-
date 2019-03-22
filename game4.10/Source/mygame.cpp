@@ -191,11 +191,13 @@ CGameStateRun::CGameStateRun(CGame *g)
 : CGameState(g), NUMBALLS(28)
 {
 	//MAP = new CMap;
+	testing_dog = new CGameCharacter();
 }
 
 CGameStateRun::~CGameStateRun()
 {
 	//delete MAP;
+	delete testing_dog;
 }
 
 void CGameStateRun::OnBeginState()
@@ -214,7 +216,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 	// SetCursor(AfxGetApp()->LoadCursor(IDC_GAMECURSOR));
 	//
 	MAP.OnMove();
-
+	testing_dog->OnMove();
 
 }
 
@@ -229,6 +231,7 @@ void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 	// 開始載入資料
 	//
 	MAP.LoadBitmap();
+	testing_dog->LoadBitmap();
 	//
 	// 完成部分Loading動作，提高進度
 	//
@@ -252,10 +255,18 @@ void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 	const char KEY_UP    = 0x26; // keyboard上箭頭
 	const char KEY_RIGHT = 0x27; // keyboard右箭頭
 	const char KEY_DOWN  = 0x28; // keyboard下箭頭
+	const char KEY_W=0x57;
+	const char KEY_A=0x41;
+	const char KEY_S=0x53;
+	const char KEY_D=0x44;
 	if (nChar == KEY_LEFT)MAP.SrollingLeft(true);
 	if (nChar == KEY_RIGHT)MAP.SrollingRight(true);
 	if (nChar == KEY_UP)MAP.SrollingUp(true);
 	if (nChar == KEY_DOWN)MAP.SrollingDown(true);
+	if (nChar == KEY_W)testing_dog->setMovingUp(true);
+	if (nChar == KEY_S)testing_dog->setMovingDown(true);
+	if (nChar == KEY_A)testing_dog->setMovingLeft(true);
+	if (nChar == KEY_D)testing_dog->setMovingRight(true);
 }
 
 void CGameStateRun::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
@@ -264,10 +275,20 @@ void CGameStateRun::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
 	const char KEY_UP    = 0x26; // keyboard上箭頭
 	const char KEY_RIGHT = 0x27; // keyboard右箭頭
 	const char KEY_DOWN  = 0x28; // keyboard下箭頭
+	const char KEY_W = 0x57;
+	const char KEY_A = 0x41;
+	const char KEY_S = 0x53;
+	const char KEY_D = 0x44;
+
 	if (nChar == KEY_LEFT)MAP.SrollingLeft(false);
 	if (nChar == KEY_RIGHT)MAP.SrollingRight(false);
 	if (nChar == KEY_UP)MAP.SrollingUp(false);
 	if (nChar == KEY_DOWN)MAP.SrollingDown(false);
+	if (nChar == KEY_W)testing_dog->setMovingUp(false);
+	if (nChar == KEY_S)testing_dog->setMovingDown(false);
+	if (nChar == KEY_A)testing_dog->setMovingLeft(false);
+	if (nChar == KEY_D)testing_dog->setMovingRight(false);
+
 }
 
 void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的動作
@@ -306,6 +327,8 @@ void CGameStateRun::OnShow()
 	//  貼上背景圖、撞擊數、球、擦子、彈跳的球
 	//
 	MAP.OnShow();
+	testing_dog->OnShow();
+	TRACE("NOW dog->X=%d Y=%d    Map->X=%d Y=%d", testing_dog->getX(), testing_dog->getY(),MAP.getX(),MAP.getY());
 	//help.ShowBitmap();					// 貼上說明圖
 	
 	//  貼上左上及右下角落的圖

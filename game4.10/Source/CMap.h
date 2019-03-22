@@ -11,6 +11,8 @@ namespace game_framework {
 		void SrollingRight(bool flag);
 		void SrollingLeft(bool flag);
 		void OnShow();											// 將圖形貼到畫面
+		int getX();
+		int getY();
 		void SetXY(int nx, int ny);								// 設定XY座標
 	private:
 		CMovingBitmap map;

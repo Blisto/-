@@ -16,7 +16,6 @@ namespace game_framework {
 		y = -290;
 		isMovingUp = false;
 		isMovingDown = false;
-
 		isMovingRight = false;
 		isMovingLeft = false;
 		
@@ -62,11 +61,13 @@ namespace game_framework {
 		isMovingLeft = flag;
 	}
 
+	int CMap::getX() { return x; }
+	int CMap::getY() { return y; }
 
 	void CMap::OnShow() 
 	{
 		map.SetTopLeft(x, y);
 		map.ShowBitmap();
-		TRACE("NOW X=%d and Y=%d", this->x, this->y);
+		//TRACE("NOW map is in X=%d and Y=%d", this->x, this->y);
 	}
 }
