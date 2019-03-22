@@ -6,6 +6,8 @@ namespace game_framework {
 		CMap();
 		void LoadBitmap();										// 載入圖形
 		void OnMove();											// 移動
+		void SrollingUp(bool flag);
+		void SrollingDown(bool flag);
 		void SrollingRight(bool flag);
 		void SrollingLeft(bool flag);
 		void OnShow();											// 將圖形貼到畫面
@@ -13,7 +15,7 @@ namespace game_framework {
 	private:
 		CMovingBitmap map;
 		int x, y;
-		bool isMovingRight,isMovingLeft;
+		bool isMovingUp, isMovingDown,isMovingRight,isMovingLeft;
 
 	};
 

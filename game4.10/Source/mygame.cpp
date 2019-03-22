@@ -254,8 +254,8 @@ void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 	const char KEY_DOWN  = 0x28; // keyboard下箭頭
 	if (nChar == KEY_LEFT)MAP.SrollingLeft(true);
 	if (nChar == KEY_RIGHT)MAP.SrollingRight(true);
-	if (nChar == KEY_UP) {}
-		if (nChar == KEY_DOWN) {}
+	if (nChar == KEY_UP)MAP.SrollingUp(true);
+	if (nChar == KEY_DOWN)MAP.SrollingDown(true);
 }
 
 void CGameStateRun::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
@@ -266,8 +266,8 @@ void CGameStateRun::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
 	const char KEY_DOWN  = 0x28; // keyboard下箭頭
 	if (nChar == KEY_LEFT)MAP.SrollingLeft(false);
 	if (nChar == KEY_RIGHT)MAP.SrollingRight(false);
-		if (nChar == KEY_UP) {}
-		if (nChar == KEY_DOWN) {}
+	if (nChar == KEY_UP)MAP.SrollingUp(false);
+	if (nChar == KEY_DOWN)MAP.SrollingDown(false);
 }
 
 void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的動作

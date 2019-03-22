@@ -189,5 +189,11 @@
     <Image Include="RES\SrollingTestMap.bmp">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="res\bitmap3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\map01.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
