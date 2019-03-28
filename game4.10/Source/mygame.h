@@ -99,6 +99,7 @@ namespace game_framework {
 		CInteger		hits_left;	// ³Ñ¤Uªº¼²À»¼Æ
 		CMap MAP;
 		CGameCharacter *testing_dog;
+		bool blockflag;
 	};
 
 	/////////////////////////////////////////////////////////////////////////////

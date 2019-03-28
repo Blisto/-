@@ -11,8 +11,10 @@ namespace game_framework
 	CGameCharacter::CGameCharacter() 
 	{
 		healthPoints = 0;
-		x = 135;
-		y = 455;
+		x = 395;
+		y = 380;
+		moveUnit = 8;
+		blockflag = false;
 		isMovingRight = false;
 		isMovingLeft = false;
 		isMovingUp = false;
@@ -64,30 +66,60 @@ namespace game_framework
 	{
 		return y;
 	}
+
+	int CGameCharacter::getHeight()
+	{
+		return character.Height();
+	}
+	int CGameCharacter::getWidth()
+	{
+		return character.Width();
+	}
+	int CGameCharacter::getUnit() 
+	{
+		return moveUnit;
+	}
 	void CGameCharacter::setHP(int newHP) 
 	{
 		healthPoints = newHP;
 	}
-
+	void CGameCharacter::setBlockFlag(bool flag) 
+	{
+		blockflag = flag;
+	}
 	void CGameCharacter::SetXY(int nx, int ny) 
 	{
 		x = ny;
 		y = ny;
 	}
 
+	void CGameCharacter::checkStep() 
+	{
+		
+	}
+
 	void CGameCharacter::OnMove() 
 	{
-		if (isMovingUp == true) { y -= 5; }
-		if (isMovingDown == true) { y += 5; }
-		if (isMovingRight == true) { x += 5; }
-		if (isMovingLeft == true) { x -= 5; }
+		if (blockflag == false) {
+			if (isMovingUp == true) { y -= moveUnit; }
+			if (isMovingDown == true) { y += moveUnit; }
+			if (isMovingRight == true) { x += moveUnit; }
+			if (isMovingLeft == true) { x -= moveUnit; }
+		}
+		else 
+		{
+			if (isMovingUp == true) { y += moveUnit; }
+			if (isMovingDown == true) { y -= moveUnit; }
+			if (isMovingRight == true) { x -= moveUnit; }
+			if (isMovingLeft == true) { x += moveUnit; }
+			blockflag = false;
+		}
 	}
 
 	void CGameCharacter::OnShow() 
 	{
 		character.SetTopLeft(x, y);
 		character.ShowBitmap();
-		//TRACE("NOW dog is in X=%d and Y=%d", this->x, this->y);
-
 	}
+
 }

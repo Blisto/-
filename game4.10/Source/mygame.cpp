@@ -192,6 +192,7 @@ CGameStateRun::CGameStateRun(CGame *g)
 {
 	//MAP = new CMap;
 	testing_dog = new CGameCharacter();
+	blockflag = false;
 }
 
 CGameStateRun::~CGameStateRun()
@@ -210,13 +211,17 @@ void CGameStateRun::OnBeginState()
 
 void CGameStateRun::OnMove()							// 移動遊戲元素
 {
-	//
+	int cy = testing_dog->getY(), cx = testing_dog->getX();
+	int cw = testing_dog->getWidth(), ch = testing_dog->getHeight();
+	int c_unit = testing_dog->getUnit();
+	
 	// 如果希望修改cursor的樣式，則將下面程式的commment取消即可
 	//
 	// SetCursor(AfxGetApp()->LoadCursor(IDC_GAMECURSOR));
 	//
 	MAP.OnMove();
-	testing_dog->OnMove();
+	//if (MAP.isBlock(cy , cx, cw, ch) == false)
+		testing_dog->OnMove();
 
 }
 
@@ -231,7 +236,9 @@ void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 	// 開始載入資料
 	//
 	MAP.LoadBitmap();
+	MAP.setMapData(0);
 	testing_dog->LoadBitmap();
+	
 	//
 	// 完成部分Loading動作，提高進度
 	//
@@ -259,36 +266,86 @@ void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 	const char KEY_A=0x41;
 	const char KEY_S=0x53;
 	const char KEY_D=0x44;
+	int cy = testing_dog->getY(),cx=testing_dog->getX();
+	int cw = testing_dog->getWidth(), ch = testing_dog->getHeight();
+	int c_unit = testing_dog->getUnit();
+
 	if (nChar == KEY_LEFT)MAP.SrollingLeft(true);
 	if (nChar == KEY_RIGHT)MAP.SrollingRight(true);
 	if (nChar == KEY_UP)MAP.SrollingUp(true);
 	if (nChar == KEY_DOWN)MAP.SrollingDown(true);
-	if (nChar == KEY_W)testing_dog->setMovingUp(true);
-	if (nChar == KEY_S)testing_dog->setMovingDown(true);
-	if (nChar == KEY_A)testing_dog->setMovingLeft(true);
-	if (nChar == KEY_D)testing_dog->setMovingRight(true);
+
+	if (nChar == KEY_W) {
+		if (MAP.isBlock(cy - c_unit, cx, cw, ch) == false)
+		{
+			testing_dog->setMovingUp(true);
+		}
+		else { 
+			testing_dog->setMovingUp(false); 
+			testing_dog->setBlockFlag(true);
+		}
+	}else if (nChar == KEY_S) {
+		if (MAP.isBlock(cy + c_unit, cx, cw, ch) == false) 
+		{
+			testing_dog->setMovingDown(true);
+		}
+		else
+		{
+			testing_dog->setMovingDown(false);
+			testing_dog->setBlockFlag(true);
+		}
+	}else if (nChar == KEY_A) { 
+		if (MAP.isBlock(cy, cx - c_unit, cw, ch) == false)
+		{
+			testing_dog->setMovingLeft(true);
+		}
+		else 
+		{
+			testing_dog->setMovingLeft(false);
+			testing_dog->setBlockFlag(true);
+		}
+	}else if (nChar == KEY_D) {
+		if (MAP.isBlock(cy, cx + c_unit, cw, ch) == false)
+		{
+			testing_dog->setMovingRight(true);
+		}
+		else 
+		{
+			testing_dog->setMovingRight(false);
+			testing_dog->setBlockFlag(true);
+		}
+	}
 }
 
 void CGameStateRun::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
 {
-	const char KEY_LEFT  = 0x25; // keyboard左箭頭
-	const char KEY_UP    = 0x26; // keyboard上箭頭
+	const char KEY_LEFT = 0x25; // keyboard左箭頭
+	const char KEY_UP = 0x26; // keyboard上箭頭
 	const char KEY_RIGHT = 0x27; // keyboard右箭頭
-	const char KEY_DOWN  = 0x28; // keyboard下箭頭
+	const char KEY_DOWN = 0x28; // keyboard下箭頭
 	const char KEY_W = 0x57;
 	const char KEY_A = 0x41;
 	const char KEY_S = 0x53;
 	const char KEY_D = 0x44;
+	int cy , cx;
+	int c_unit = testing_dog->getUnit();
 
 	if (nChar == KEY_LEFT)MAP.SrollingLeft(false);
 	if (nChar == KEY_RIGHT)MAP.SrollingRight(false);
 	if (nChar == KEY_UP)MAP.SrollingUp(false);
 	if (nChar == KEY_DOWN)MAP.SrollingDown(false);
-	if (nChar == KEY_W)testing_dog->setMovingUp(false);
-	if (nChar == KEY_S)testing_dog->setMovingDown(false);
-	if (nChar == KEY_A)testing_dog->setMovingLeft(false);
-	if (nChar == KEY_D)testing_dog->setMovingRight(false);
-
+	if (nChar == KEY_W) { 
+		testing_dog->setMovingUp(false); 
+	}
+	if (nChar == KEY_S) {
+		testing_dog->setMovingDown(false); 
+	}
+	if (nChar == KEY_A){
+		testing_dog->setMovingLeft(false);
+	}
+	if (nChar == KEY_D) { 
+		testing_dog->setMovingRight(false); 
+	}
 }
 
 void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的動作
@@ -328,7 +385,8 @@ void CGameStateRun::OnShow()
 	//
 	MAP.OnShow();
 	testing_dog->OnShow();
-	TRACE("NOW dog->X=%d Y=%d    Map->X=%d Y=%d", testing_dog->getX(), testing_dog->getY(),MAP.getX(),MAP.getY());
+	//int tx1 = testing_dog->getX() - MAP.getX(), ty1 = testing_dog->getY() - MAP.getY();
+	TRACE("NOW dog->X=%d Y=%d    Map->X=%d Y=%d  ", testing_dog->getX(), testing_dog->getY(),MAP.getX(),MAP.getY());
 	//help.ShowBitmap();					// 貼上說明圖
 	
 	//  貼上左上及右下角落的圖
