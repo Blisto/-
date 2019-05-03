@@ -319,7 +319,7 @@ CMovingBitmap::CMovingBitmap()
 
 int CMovingBitmap::Height()
 {
-	GAME_ASSERT(isBitmapLoaded,"A bitmap must be loaded before Height() is called !!!");
+	//GAME_ASSERT(isBitmapLoaded,"A bitmap must be loaded before Height() is called !!!");
 	return location.bottom - location.top;
 }
 
@@ -405,7 +405,7 @@ int CMovingBitmap::Top()
 
 int CMovingBitmap::Width()
 {
-	GAME_ASSERT(isBitmapLoaded,"A bitmap must be loaded before Width() is called !!!");
+	//GAME_ASSERT(isBitmapLoaded,"A bitmap must be loaded before Width() is called !!!");
 	return location.right - location.left;
 }
 

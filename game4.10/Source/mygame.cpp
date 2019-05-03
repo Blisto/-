@@ -191,19 +191,17 @@ CGameStateRun::CGameStateRun(CGame *g)
 : CGameState(g), NUMBALLS(28)
 {
 	//MAP = new CMap;
-	testing_dog = new CGameCharacter();
-	blockflag = false;
 }
 
 CGameStateRun::~CGameStateRun()
 {
-	//delete MAP;
-	delete testing_dog;
+
 }
 
 void CGameStateRun::OnBeginState()
 {
 	const int BACKGROUND_X = 60;
+	counter = 30 * 5;
 	CAudio::Instance()->Play(AUDIO_LAKE, true);			// 撥放 WAVE
 	CAudio::Instance()->Play(AUDIO_DING, false);		// 撥放 WAVE
 	CAudio::Instance()->Play(AUDIO_NTUT, true);			// 撥放 MIDI
@@ -211,22 +209,44 @@ void CGameStateRun::OnBeginState()
 
 void CGameStateRun::OnMove()							// 移動遊戲元素
 {
-	int cy = testing_dog->getY(), cx = testing_dog->getX();
-	int cw = testing_dog->getWidth(), ch = testing_dog->getHeight();
-	int c_unit = testing_dog->getUnit();
+	//int cy = testing_dog->getY(), cx = testing_dog->getX();
+	//int cw = 50, ch = 70;
+	//int c_unit = testing_dog->getUnit();
 	
 	// 如果希望修改cursor的樣式，則將下面程式的commment取消即可
 	//
 	// SetCursor(AfxGetApp()->LoadCursor(IDC_GAMECURSOR));
 	//
-	MAP.OnMove();
-	//if (MAP.isBlock(cy , cx, cw, ch) == false)
-		testing_dog->OnMove();
+	
+	MAP.OnMove(); 
+
+
+	if (MAP.isDead() == true) {
+
+		CDC *pDC = CDDraw::GetBackCDC();			// 取得 Back Plain 的 CDC 
+		CFont f, *fp;
+		f.CreatePointFont(160, "Times New Roman");	// 產生 font f; 160表示16 point的字
+		fp = pDC->SelectObject(&f);					// 選用 font f
+		pDC->SetBkColor(RGB(0, 0, 0));
+		pDC->SetTextColor(RGB(255, 255, 0));
+		pDC->TextOut(5, 425, "角色死亡");
+		pDC->SelectObject(fp);						// 放掉 font f (千萬不要漏了放掉)
+		CDDraw::ReleaseBackCDC();					// 放掉 Back Plain 的 CDC
+		counter--;
+		if (counter == 0) {
+			GotoGameState(GAME_STATE_OVER);
+			MAP.SetXY(0, 0);
+			MAP.playerXY(0, 0);
+		}
+	}
+
+
 
 }
 
 void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 {
+
 	//
 	// 當圖很多時，OnInit載入所有的圖要花很多時間。為避免玩遊戲的人
 	//     等的不耐煩，遊戲會出現「Loading ...」，顯示Loading的進度。
@@ -236,10 +256,8 @@ void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 	// 開始載入資料
 	//
 	MAP.LoadBitmap();
-	MAP.setMapData(0);
-	testing_dog->LoadBitmap();
-	
-	//
+	jumpTime = 15;
+
 	// 完成部分Loading動作，提高進度
 	//
 	ShowInitProgress(50);
@@ -262,59 +280,34 @@ void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 	const char KEY_UP    = 0x26; // keyboard上箭頭
 	const char KEY_RIGHT = 0x27; // keyboard右箭頭
 	const char KEY_DOWN  = 0x28; // keyboard下箭頭
+	const char KEY_SPACE = 0x20;
 	const char KEY_W=0x57;
 	const char KEY_A=0x41;
 	const char KEY_S=0x53;
 	const char KEY_D=0x44;
-	int cy = testing_dog->getY(),cx=testing_dog->getX();
-	int cw = testing_dog->getWidth(), ch = testing_dog->getHeight();
-	int c_unit = testing_dog->getUnit();
 
-	if (nChar == KEY_LEFT)MAP.SrollingLeft(true);
-	if (nChar == KEY_RIGHT)MAP.SrollingRight(true);
+
 	if (nChar == KEY_UP)MAP.SrollingUp(true);
 	if (nChar == KEY_DOWN)MAP.SrollingDown(true);
 
+
 	if (nChar == KEY_W) {
-		if (MAP.isBlock(cy - c_unit, cx, cw, ch) == false)
-		{
-			testing_dog->setMovingUp(true);
-		}
-		else { 
-			testing_dog->setMovingUp(false); 
-			testing_dog->setBlockFlag(true);
-		}
+		if(MAP.getPlayerUP()==false)MAP.playerUP(true);
 	}else if (nChar == KEY_S) {
-		if (MAP.isBlock(cy + c_unit, cx, cw, ch) == false) 
-		{
-			testing_dog->setMovingDown(true);
-		}
-		else
-		{
-			testing_dog->setMovingDown(false);
-			testing_dog->setBlockFlag(true);
-		}
-	}else if (nChar == KEY_A) { 
-		if (MAP.isBlock(cy, cx - c_unit, cw, ch) == false)
-		{
-			testing_dog->setMovingLeft(true);
-		}
-		else 
-		{
-			testing_dog->setMovingLeft(false);
-			testing_dog->setBlockFlag(true);
-		}
-	}else if (nChar == KEY_D) {
-		if (MAP.isBlock(cy, cx + c_unit, cw, ch) == false)
-		{
-			testing_dog->setMovingRight(true);
-		}
-		else 
-		{
-			testing_dog->setMovingRight(false);
-			testing_dog->setBlockFlag(true);
-		}
+		MAP.playerDown(true);
+	}else if (nChar == KEY_SPACE) {
+		MAP.playerAttack();
 	}
+	if (nChar == KEY_A)MAP.SrollingLeft(true);
+	if (nChar == KEY_D)MAP.SrollingRight(true);
+	//else if (nChar == KEY_A) {
+	//	MAP.playerLeft(true);
+	//}
+	//else if (nChar == KEY_D) {
+	//	MAP.playerRight(true);
+	//}
+	
+
 }
 
 void CGameStateRun::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
@@ -327,25 +320,25 @@ void CGameStateRun::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
 	const char KEY_A = 0x41;
 	const char KEY_S = 0x53;
 	const char KEY_D = 0x44;
-	int cy , cx;
-	int c_unit = testing_dog->getUnit();
 
-	if (nChar == KEY_LEFT)MAP.SrollingLeft(false);
-	if (nChar == KEY_RIGHT)MAP.SrollingRight(false);
+	if (nChar == KEY_A)MAP.SrollingLeft(false);
+	if (nChar == KEY_D)MAP.SrollingRight(false);
 	if (nChar == KEY_UP)MAP.SrollingUp(false);
 	if (nChar == KEY_DOWN)MAP.SrollingDown(false);
+
 	if (nChar == KEY_W) { 
-		testing_dog->setMovingUp(false); 
+		MAP.playerUP(false);
+		//jumpTime = 15;
 	}
 	if (nChar == KEY_S) {
-		testing_dog->setMovingDown(false); 
+		MAP.playerDown(false);
 	}
-	if (nChar == KEY_A){
-		testing_dog->setMovingLeft(false);
-	}
-	if (nChar == KEY_D) { 
-		testing_dog->setMovingRight(false); 
-	}
+	//if (nChar == KEY_A){
+	//	MAP.playerLeft(false);
+	//}
+	//if (nChar == KEY_D) { 
+	//	MAP.playerRight(false);
+	//}
 }
 
 void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的動作
@@ -383,10 +376,9 @@ void CGameStateRun::OnShow()
 	//
 	//  貼上背景圖、撞擊數、球、擦子、彈跳的球
 	//
+	
 	MAP.OnShow();
-	testing_dog->OnShow();
-	//int tx1 = testing_dog->getX() - MAP.getX(), ty1 = testing_dog->getY() - MAP.getY();
-	TRACE("NOW dog->X=%d Y=%d    Map->X=%d Y=%d  ", testing_dog->getX(), testing_dog->getY(),MAP.getX(),MAP.getY());
+
 	//help.ShowBitmap();					// 貼上說明圖
 	
 	//  貼上左上及右下角落的圖

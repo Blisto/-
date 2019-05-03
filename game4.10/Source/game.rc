@@ -112,6 +112,8 @@ MAP01                   BITMAP                  "..\\res\\map01.bmp"
 
 TestDog                 BITMAP                  "..\\res\\dog1.bmp"
 
+monsterTest             BITMAP                  "..\\RES\\testMonster.bmp"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
