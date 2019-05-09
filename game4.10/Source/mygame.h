@@ -38,7 +38,7 @@
  *      3. Use ShowInitProgress(percent) to display loading progress.
 */
 
-#include"CMap.h"
+#include"Map.h"
 //#include"CGameCharacter.h"
 
 namespace game_framework {
@@ -67,7 +67,8 @@ namespace game_framework {
 	protected:
 		void OnShow();									// 顯示這個狀態的遊戲畫面
 	private:
-		CMovingBitmap logo;								// csie的logo
+		CAnimation menu[3];
+		int option;
 	};
 
 	/////////////////////////////////////////////////////////////////////////////
@@ -97,8 +98,8 @@ namespace game_framework {
 		CMovingBitmap	help;		// 說明圖
 		CMovingBitmap	corner;		// 角落圖
 		CInteger		hits_left;	// 剩下的撞擊數
-		CMap MAP;
-		//CGameCharacter *testing_dog;
+		//CMap MAP;
+		Map *Newmap;
 		int speed;
 		int jumpTime;
 		int counter;
@@ -119,6 +120,8 @@ namespace game_framework {
 		void OnShow();									// 顯示這個狀態的遊戲畫面
 	private:
 		int counter;	// 倒數之計數器
+		CAnimation gameover[3];
+		int animNext;
 	};
 
 }

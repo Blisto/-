@@ -252,10 +252,7 @@ namespace game_framework
 		x = nx; y = ny;
 	}
 
-	void CGameCharacter::checkStep() 
-	{
-		
-	}
+
 
 	void CGameCharacter::OnMove(int my,int mx) 
 	{

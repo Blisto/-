@@ -79,55 +79,80 @@ void CGameStateInit::OnInit()
 	//
 	// 開始載入資料
 	//
-	logo.LoadBitmap(IDB_BACKGROUND);
 	Sleep(300);				// 放慢，以便看清楚進度，實際遊戲請刪除此Sleep
 	//
 	// 此OnInit動作會接到CGameStaterRun::OnInit()，所以進度還沒到100%
 	//
+	option = 0;
+	menu[0].AddBitmap(menu0,RGB(255, 255, 255));
+	menu[0].AddBitmap(menu1, RGB(255, 255, 255));
+	menu[0].SetDelayCount(6);
+	menu[1].AddBitmap(menu0, RGB(255, 255, 255));
+	menu[1].AddBitmap(menu2, RGB(255, 255, 255));
+	menu[1].SetDelayCount(6);
+	menu[2].AddBitmap(menu0, RGB(255, 255, 255));
+	menu[2].AddBitmap(menu3, RGB(255, 255, 255));
+	menu[2].SetDelayCount(6);
 }
 
 void CGameStateInit::OnBeginState()
 {
+	option = 0;
 }
 
 void CGameStateInit::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
 {
 	const char KEY_ESC = 27;
-	const char KEY_SPACE = ' ';
+	const char KEY_LEFT = 0x25; // keyboard左箭頭
+	const char KEY_UP = 0x26; // keyboard上箭頭
+	const char KEY_RIGHT = 0x27; // keyboard右箭頭
+	const char KEY_DOWN = 0x28; // keyboard下箭頭
+	const char KEY_SPACE = 0x20;
+	
+	if (nChar == KEY_UP)
+	{
+		if (option > 0) { option--; }
+	}
+	if (nChar == KEY_DOWN)
+	{
+		if (option <2) { option++; }
+	}
+
 	if (nChar == KEY_SPACE)
-		GotoGameState(GAME_STATE_RUN);						// 切換至GAME_STATE_RUN
-	else if (nChar == KEY_ESC)								// Demo 關閉遊戲的方法
-		PostMessage(AfxGetMainWnd()->m_hWnd, WM_CLOSE,0,0);	// 關閉遊戲
+	{
+		if(option==0)GotoGameState(GAME_STATE_RUN);// 切換至GAME_STATE_RUN
+		if(option==2)PostMessage(AfxGetMainWnd()->m_hWnd, WM_CLOSE, 0, 0);	// 關閉遊戲
+	}
+
+		
 }
 
 void CGameStateInit::OnLButtonDown(UINT nFlags, CPoint point)
 {
-	GotoGameState(GAME_STATE_RUN);		// 切換至GAME_STATE_RUN
+	//GotoGameState(GAME_STATE_RUN);		// 切換至GAME_STATE_RUN
 }
 
 void CGameStateInit::OnShow()
 {
-	//
-	// 貼上logo
-	//
-	logo.SetTopLeft((SIZE_X - logo.Width())/2, SIZE_Y/8);
-	logo.ShowBitmap();
-	//
-	// Demo螢幕字型的使用，不過開發時請盡量避免直接使用字型，改用CMovingBitmap比較好
-	//
-	CDC *pDC = CDDraw::GetBackCDC();			// 取得 Back Plain 的 CDC 
-	CFont f,*fp;
-	f.CreatePointFont(160,"Times New Roman");	// 產生 font f; 160表示16 point的字
-	fp=pDC->SelectObject(&f);					// 選用 font f
-	pDC->SetBkColor(RGB(0,0,0));
-	pDC->SetTextColor(RGB(255,255,0));
-	pDC->TextOut(120,220,"Please click mouse or press SPACE to begin.");
-	pDC->TextOut(5,395,"Press Ctrl-F to switch in between window mode and full screen mode.");
-	if (ENABLE_GAME_PAUSE)
-		pDC->TextOut(5,425,"Press Ctrl-Q to pause the Game.");
-	pDC->TextOut(5,455,"Press Alt-F4 or ESC to Quit.");
-	pDC->SelectObject(fp);						// 放掉 font f (千萬不要漏了放掉)
-	CDDraw::ReleaseBackCDC();					// 放掉 Back Plain 的 CDC
+	////
+	//// Demo螢幕字型的使用，不過開發時請盡量避免直接使用字型，改用CMovingBitmap比較好
+	////
+	//CDC *pDC = CDDraw::GetBackCDC();			// 取得 Back Plain 的 CDC 
+	//CFont f,*fp;
+	//f.CreatePointFont(160,"Times New Roman");	// 產生 font f; 160表示16 point的字
+	//fp=pDC->SelectObject(&f);					// 選用 font f
+	//pDC->SetBkColor(RGB(0,0,0));
+	//pDC->SetTextColor(RGB(255,255,0));
+	//pDC->TextOut(120,220,"Please click mouse or press SPACE to begin.");
+	//pDC->TextOut(5,395,"Press Ctrl-F to switch in between window mode and full screen mode.");
+	//if (ENABLE_GAME_PAUSE)
+	//	pDC->TextOut(5,425,"Press Ctrl-Q to pause the Game.");
+	//pDC->TextOut(5,455,"Press Alt-F4 or ESC to Quit.");
+	//pDC->SelectObject(fp);						// 放掉 font f (千萬不要漏了放掉)
+	//CDDraw::ReleaseBackCDC();					// 放掉 Back Plain 的 CDC
+	menu[option].SetTopLeft(0, 0);
+	menu[option].OnShow();
+	menu[option].OnMove();
 }								
 
 /////////////////////////////////////////////////////////////////////////////
@@ -140,15 +165,31 @@ CGameStateOver::CGameStateOver(CGame *g)
 }
 
 void CGameStateOver::OnMove()
-{
+{	
 	counter--;
-	if (counter < 0)
-		GotoGameState(GAME_STATE_INIT);
+	if (counter <= 150 && counter > 90)animNext = 0;
+	if(counter <= 90 && counter > 30)animNext = 1;
+	if (counter <= 30 && counter > 0)animNext = 2;
+	if (counter < 0)GotoGameState(GAME_STATE_INIT);
+
+	if (animNext != 2) { gameover[animNext].OnMove(); }
+	else { if (gameover[2].IsFinalBitmap() != true)gameover[animNext].OnMove(); }
 }
 
 void CGameStateOver::OnBeginState()
 {
 	counter = 30 * 5; // 5 seconds
+	animNext = 0;
+	gameover[0].AddBitmap(gameover0, RGB(255, 255, 255));
+	gameover[1].AddBitmap(gameover2, RGB(255, 255, 255));
+	gameover[1].AddBitmap(gameover3, RGB(255, 255, 255));
+	gameover[1].SetDelayCount(3);
+	gameover[2].AddBitmap(gameover4, RGB(255, 255, 255));
+	gameover[2].AddBitmap(gameover5, RGB(255, 255, 255));
+	gameover[2].AddBitmap(gameover6, RGB(255, 255, 255));
+	gameover[2].AddBitmap(gameover7, RGB(255, 255, 255));
+	gameover[2].AddBitmap(gameover8, RGB(255, 255, 255));
+	gameover[2].SetDelayCount(5);
 }
 
 void CGameStateOver::OnInit()
@@ -170,17 +211,19 @@ void CGameStateOver::OnInit()
 
 void CGameStateOver::OnShow()
 {
-	CDC *pDC = CDDraw::GetBackCDC();			// 取得 Back Plain 的 CDC 
-	CFont f,*fp;
-	f.CreatePointFont(160,"Times New Roman");	// 產生 font f; 160表示16 point的字
-	fp=pDC->SelectObject(&f);					// 選用 font f
-	pDC->SetBkColor(RGB(0,0,0));
-	pDC->SetTextColor(RGB(255,255,0));
-	char str[80];								// Demo 數字對字串的轉換
-	sprintf(str, "Game Over ! (%d)", counter / 30);
-	pDC->TextOut(240,210,str);
-	pDC->SelectObject(fp);						// 放掉 font f (千萬不要漏了放掉)
-	CDDraw::ReleaseBackCDC();					// 放掉 Back Plain 的 CDC
+	//CDC *pDC = CDDraw::GetBackCDC();			// 取得 Back Plain 的 CDC 
+	//CFont f,*fp;
+	//f.CreatePointFont(160,"Times New Roman");	// 產生 font f; 160表示16 point的字
+	//fp=pDC->SelectObject(&f);					// 選用 font f
+	//pDC->SetBkColor(RGB(0,0,0));
+	//pDC->SetTextColor(RGB(255,255,0));
+	//char str[80];								// Demo 數字對字串的轉換
+	//sprintf(str, "Game Over ! (%d)", counter / 30);
+	//pDC->TextOut(240,210,str);
+	//pDC->SelectObject(fp);						// 放掉 font f (千萬不要漏了放掉)
+	//CDDraw::ReleaseBackCDC();					// 放掉 Back Plain 的 CDC
+	gameover[animNext].SetTopLeft(0, 0);
+	gameover[animNext].OnShow();
 }
 
 /////////////////////////////////////////////////////////////////////////////
@@ -191,11 +234,43 @@ CGameStateRun::CGameStateRun(CGame *g)
 : CGameState(g), NUMBALLS(28)
 {
 	//MAP = new CMap;
+	Newmap = new Map;
 }
 
-CGameStateRun::~CGameStateRun()
+void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 {
 
+	//
+	// 當圖很多時，OnInit載入所有的圖要花很多時間。為避免玩遊戲的人
+	//     等的不耐煩，遊戲會出現「Loading ...」，顯示Loading的進度。
+	//
+	ShowInitProgress(33);	// 接個前一個狀態的進度，此處進度視為33%
+							//
+							// 開始載入資料
+							//
+							// 完成部分Loading動作，提高進度
+							//
+	ShowInitProgress(50);
+	Sleep(300); // 放慢，以便看清楚進度，實際遊戲請刪除此Sleep
+				//
+				// 繼續載入其他資料
+				//
+	help.LoadBitmap(IDB_HELP, RGB(255, 255, 255));				// 載入說明的圖形
+	CAudio::Instance()->Load(AUDIO_DING, "sounds\\ding.wav");	// 載入編號0的聲音ding.wav
+	CAudio::Instance()->Load(AUDIO_LAKE, "sounds\\lake.mp3");	// 載入編號1的聲音lake.mp3
+	CAudio::Instance()->Load(AUDIO_NTUT, "sounds\\ntut.mid");	// 載入編號2的聲音ntut.mid
+																//
+																// 此OnInit動作會接到CGameStaterOver::OnInit()，所以進度還沒到100%
+																//
+
+
+	//jumpTime = 15;
+	//MAP.LoadBitmap();
+	Newmap->LoadBitmap();
+}
+CGameStateRun::~CGameStateRun()
+{
+	delete Newmap;
 }
 
 void CGameStateRun::OnBeginState()
@@ -217,62 +292,35 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 	//
 	// SetCursor(AfxGetApp()->LoadCursor(IDC_GAMECURSOR));
 	//
-	
-	MAP.OnMove(); 
 
 
-	if (MAP.isDead() == true) {
+	//////////////////////////////////////////////////////////////////////////////////
+	//MAP.OnMove(); 
+	//if (MAP.isDead() == true) {
 
-		CDC *pDC = CDDraw::GetBackCDC();			// 取得 Back Plain 的 CDC 
-		CFont f, *fp;
-		f.CreatePointFont(160, "Times New Roman");	// 產生 font f; 160表示16 point的字
-		fp = pDC->SelectObject(&f);					// 選用 font f
-		pDC->SetBkColor(RGB(0, 0, 0));
-		pDC->SetTextColor(RGB(255, 255, 0));
-		pDC->TextOut(5, 425, "角色死亡");
-		pDC->SelectObject(fp);						// 放掉 font f (千萬不要漏了放掉)
-		CDDraw::ReleaseBackCDC();					// 放掉 Back Plain 的 CDC
-		counter--;
-		if (counter == 0) {
-			GotoGameState(GAME_STATE_OVER);
-			MAP.SetXY(0, 0);
-			MAP.playerXY(0, 0);
-		}
-	}
+	//	CDC *pDC = CDDraw::GetBackCDC();			// 取得 Back Plain 的 CDC 
+	//	CFont f, *fp;
+	//	f.CreatePointFont(160, "Times New Roman");	// 產生 font f; 160表示16 point的字
+	//	fp = pDC->SelectObject(&f);					// 選用 font f
+	//	pDC->SetBkColor(RGB(0, 0, 0));
+	//	pDC->SetTextColor(RGB(255, 255, 0));
+	//	pDC->TextOut(5, 425, "角色死亡");
+	//	pDC->SelectObject(fp);						// 放掉 font f (千萬不要漏了放掉)
+	//	CDDraw::ReleaseBackCDC();					// 放掉 Back Plain 的 CDC
+	//	counter--;
+	//	if (counter == 0) {
+	//		GotoGameState(GAME_STATE_OVER);
+	//		MAP.SetXY(0, 0);
+	//		MAP.playerXY(0, 0);
+	//	}
+	//}
+	//////////////////////////////////////////////////////////////////////////////////
 
 
-
+	Newmap->OnMove();
+	if (Newmap->getDeadState() == true)GotoGameState(GAME_STATE_OVER);
 }
 
-void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
-{
-
-	//
-	// 當圖很多時，OnInit載入所有的圖要花很多時間。為避免玩遊戲的人
-	//     等的不耐煩，遊戲會出現「Loading ...」，顯示Loading的進度。
-	//
-	ShowInitProgress(33);	// 接個前一個狀態的進度，此處進度視為33%
-	//
-	// 開始載入資料
-	//
-	MAP.LoadBitmap();
-	jumpTime = 15;
-
-	// 完成部分Loading動作，提高進度
-	//
-	ShowInitProgress(50);
-	Sleep(300); // 放慢，以便看清楚進度，實際遊戲請刪除此Sleep
-	//
-	// 繼續載入其他資料
-	//
-	help.LoadBitmap(IDB_HELP,RGB(255,255,255));				// 載入說明的圖形
-	CAudio::Instance()->Load(AUDIO_DING,  "sounds\\ding.wav");	// 載入編號0的聲音ding.wav
-	CAudio::Instance()->Load(AUDIO_LAKE,  "sounds\\lake.mp3");	// 載入編號1的聲音lake.mp3
-	CAudio::Instance()->Load(AUDIO_NTUT,  "sounds\\ntut.mid");	// 載入編號2的聲音ntut.mid
-	//
-	// 此OnInit動作會接到CGameStaterOver::OnInit()，所以進度還沒到100%
-	//
-}
 
 void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 {
@@ -286,28 +334,46 @@ void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 	const char KEY_S=0x53;
 	const char KEY_D=0x44;
 
+	//////////////////////////////////////////////////////////////////////////////////
+	//if (nChar == KEY_UP)MAP.SrollingUp(true);
+	//if (nChar == KEY_DOWN)MAP.SrollingDown(true);
 
-	if (nChar == KEY_UP)MAP.SrollingUp(true);
-	if (nChar == KEY_DOWN)MAP.SrollingDown(true);
 
-
-	if (nChar == KEY_W) {
-		if(MAP.getPlayerUP()==false)MAP.playerUP(true);
-	}else if (nChar == KEY_S) {
-		MAP.playerDown(true);
-	}else if (nChar == KEY_SPACE) {
-		MAP.playerAttack();
-	}
-	if (nChar == KEY_A)MAP.SrollingLeft(true);
-	if (nChar == KEY_D)MAP.SrollingRight(true);
+	//if (nChar == KEY_W) {
+	//	if(MAP.getPlayerUP()==false)MAP.playerUP(true);
+	//}else if (nChar == KEY_S) {
+	//	MAP.playerDown(true);
+	//}else if (nChar == KEY_SPACE) {
+	//	MAP.playerAttack();
+	//}
+	//if (nChar == KEY_A)MAP.SrollingLeft(true);
+	//if (nChar == KEY_D)MAP.SrollingRight(true);
 	//else if (nChar == KEY_A) {
 	//	MAP.playerLeft(true);
 	//}
 	//else if (nChar == KEY_D) {
 	//	MAP.playerRight(true);
 	//}
-	
+	//////////////////////////////////////////////////////////////////////////////////
 
+
+	//////////////////////////////////////////////////////////////////////////////////
+	//重構
+	if (nChar == KEY_UP) { Newmap->SrollingUp(true); }
+	//if (nChar == KEY_DOWN) { Newmap->SrollingDown(true);}
+	if (nChar == KEY_LEFT) { Newmap->SrollingLeft(true); }
+	if (nChar == KEY_RIGHT) { Newmap->SrollingRight(true); }
+
+	if (nChar == KEY_A) { Newmap->playerAtk(true); }
+	if (nChar == KEY_S) { Newmap->playerAtk2(true); }
+	if (nChar == KEY_SPACE) { Newmap->mesgNext(); }
+	if (nChar == KEY_W) { GotoGameState(GAME_STATE_OVER); }
+
+	//if (nChar == KEY_W) { Newmap->playerUP(true); }
+	//if (nChar == KEY_S) { Newmap->testhp(); }
+	//if (nChar == KEY_S) { Newmap->playerDown(true); }
+	//if (nChar == KEY_A) { Newmap->playerLeft(true); }
+	//if (nChar == KEY_D) { Newmap->playerRight(true); }
 }
 
 void CGameStateRun::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
@@ -316,29 +382,47 @@ void CGameStateRun::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
 	const char KEY_UP = 0x26; // keyboard上箭頭
 	const char KEY_RIGHT = 0x27; // keyboard右箭頭
 	const char KEY_DOWN = 0x28; // keyboard下箭頭
+	const char KEY_SPACE = 0x20;
 	const char KEY_W = 0x57;
 	const char KEY_A = 0x41;
 	const char KEY_S = 0x53;
 	const char KEY_D = 0x44;
 
-	if (nChar == KEY_A)MAP.SrollingLeft(false);
-	if (nChar == KEY_D)MAP.SrollingRight(false);
-	if (nChar == KEY_UP)MAP.SrollingUp(false);
-	if (nChar == KEY_DOWN)MAP.SrollingDown(false);
 
-	if (nChar == KEY_W) { 
-		MAP.playerUP(false);
-		//jumpTime = 15;
-	}
-	if (nChar == KEY_S) {
-		MAP.playerDown(false);
-	}
+	//////////////////////////////////////////////////////////////////////////////////
+	//if (nChar == KEY_A)MAP.SrollingLeft(false);
+	//if (nChar == KEY_D)MAP.SrollingRight(false);
+	//if (nChar == KEY_UP)MAP.SrollingUp(false);
+	//if (nChar == KEY_DOWN)MAP.SrollingDown(false);
+
+	//if (nChar == KEY_W) { 
+	//	MAP.playerUP(false);
+	//	//jumpTime = 15;
+	//}
+	//if (nChar == KEY_S) {
+	//	MAP.playerDown(false);
+	//}
 	//if (nChar == KEY_A){
 	//	MAP.playerLeft(false);
 	//}
 	//if (nChar == KEY_D) { 
 	//	MAP.playerRight(false);
 	//}
+	//////////////////////////////////////////////////////////////////////////////////
+
+	//////////////////////////////////////////////////////////////////////////////////
+	//重構
+	if (nChar == KEY_UP) { Newmap->SrollingUp(false); }
+	//if (nChar == KEY_DOWN) { Newmap->SrollingDown(false); }
+	if (nChar == KEY_LEFT) { Newmap->SrollingLeft(false); }
+	if (nChar == KEY_RIGHT) { Newmap->SrollingRight(false); }
+
+	//if (nChar == KEY_SPACE) { Newmap->playerAtk(false); }
+
+	//if (nChar == KEY_W) { Newmap->playerUP(false); }
+	//if (nChar == KEY_S) { Newmap->playerDown(false); }
+	//if (nChar == KEY_A) { Newmap->playerLeft(false); }
+	//if (nChar == KEY_D) { Newmap->playerRight(false); }
 }
 
 void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的動作
@@ -377,12 +461,13 @@ void CGameStateRun::OnShow()
 	//  貼上背景圖、撞擊數、球、擦子、彈跳的球
 	//
 	
-	MAP.OnShow();
+	//MAP.OnShow();
 
 	//help.ShowBitmap();					// 貼上說明圖
 	
 	//  貼上左上及右下角落的圖
 	//
-	
+	//Newmap->mesg(5);
+	Newmap->OnShow();
 }
 }

@@ -24,11 +24,8 @@ namespace game_framework
 		void counte_distence(int my,int mx);
 		int get_distence(int UDLR);
 		void test();
-		//bool isHit(int x1, int y1, int x2, int y2);
 		void Attack(CGameCharacter *monster, int mx, int my);
-		//void Shooting();
 		void SetXY(int nx, int ny);
-		void checkStep();
 		void OnShow();			// 將圖形貼到畫面
 		void OnMove(int my, int mx);
 		void MonsterInit(int my, int mx);

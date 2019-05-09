@@ -114,6 +114,198 @@ TestDog                 BITMAP                  "..\\res\\dog1.bmp"
 
 monsterTest             BITMAP                  "..\\RES\\testMonster.bmp"
 
+m1                      BITMAP                  "..\\res\\m1.bmp"
+
+R_P0                    BITMAP                  "..\\res\\unA_r\\p0.bmp"
+
+R_P1                    BITMAP                  "..\\res\\unA_r\\p1.bmp"
+
+R_P2                    BITMAP                  "..\\res\\unA_r\\p2.bmp"
+
+R_P3                    BITMAP                  "..\\res\\unA_r\\p3.bmp"
+
+R_P4                    BITMAP                  "..\\res\\unA_r\\p4.bmp"
+
+R_P5                    BITMAP                  "..\\res\\unA_r\\p5.bmp"
+
+R_P6                    BITMAP                  "..\\res\\unA_r\\p6.bmp"
+
+L_P0                    BITMAP                  "..\\res\\unA_l\\p0.bmp"
+
+L_P1                    BITMAP                  "..\\res\\unA_l\\p1.bmp"
+
+L_P2                    BITMAP                  "..\\res\\unA_l\\p2.bmp"
+
+L_P3                    BITMAP                  "..\\res\\unA_l\\p3.bmp"
+
+L_P4                    BITMAP                  "..\\res\\unA_l\\p4.bmp"
+
+L_P5                    BITMAP                  "..\\res\\unA_l\\p5.bmp"
+
+L_P6                    BITMAP                  "..\\res\\unA_l\\p6.bmp"
+
+R_J1                    BITMAP                  "..\\res\\unA_r\\j1.bmp"
+
+R_J2                    BITMAP                  "..\\res\\unA_r\\j2.bmp"
+
+L_J1                    BITMAP                  "..\\res\\unA_l\\j1.bmp"
+
+L_J2                    BITMAP                  "..\\res\\unA_l\\j2.bmp"
+
+HP16                    BITMAP                  "..\\res\\UI\\HP16.bmp"
+
+HP0                     BITMAP                  "..\\res\\UI\\HP0.bmp"
+
+HP1                     BITMAP                  "..\\res\\UI\\HP1.bmp"
+
+HP2                     BITMAP                  "..\\res\\UI\\HP2.bmp"
+
+HP3                     BITMAP                  "..\\res\\UI\\HP3.bmp"
+
+HP4                     BITMAP                  "..\\res\\UI\\HP4.bmp"
+
+HP5                     BITMAP                  "..\\res\\UI\\HP5.bmp"
+
+HP6                     BITMAP                  "..\\res\\UI\\HP6.bmp"
+
+HP7                     BITMAP                  "..\\res\\UI\\HP7.bmp"
+
+HP8                     BITMAP                  "..\\res\\UI\\HP8.bmp"
+
+HP9                     BITMAP                  "..\\res\\UI\\HP9.bmp"
+
+HP10                    BITMAP                  "..\\res\\UI\\HP10.bmp"
+
+HP11                    BITMAP                  "..\\res\\UI\\HP11.bmp"
+
+HP12                    BITMAP                  "..\\res\\UI\\HP12.bmp"
+
+HP13                    BITMAP                  "..\\res\\UI\\HP13.bmp"
+
+HP14                    BITMAP                  "..\\res\\UI\\HP14.bmp"
+
+HP15                    BITMAP                  "..\\res\\UI\\HP15.bmp"
+
+M1_0                    BITMAP                  "..\\res\\monster\\m1_0.bmp"
+
+M1_1                    BITMAP                  "..\\res\\monster\\m1_1.bmp"
+
+M1_2                    BITMAP                  "..\\res\\monster\\m1_2.bmp"
+
+M1_3                    BITMAP                  "..\\res\\monster\\m1_3.bmp"
+
+M1_4                    BITMAP                  "..\\res\\monster\\m1_4.bmp"
+
+M1_5                    BITMAP                  "..\\res\\monster\\m1_5.bmp"
+
+spear_L                 BITMAP                  "..\\res\\wep\\spear_l.bmp"
+
+spear_r                 BITMAP                  "..\\res\\wep\\spear_r.bmp"
+
+atk1_L                  BITMAP                  "..\\res\\unA_l\\attack1.bmp"
+
+atk2_L                  BITMAP                  "..\\res\\unA_l\\attack2.bmp"
+
+atk1_R                  BITMAP                  "..\\res\\unA_r\\attack1.bmp"
+
+atk2_R                  BITMAP                  "..\\res\\unA_r\\attack2.bmp"
+
+mb0                     BITMAP                  "..\\res\\UI\\mesBox0.bmp"
+
+mb1                     BITMAP                  "..\\res\\UI\\mesBox1.bmp"
+
+mb2                     BITMAP                  "..\\res\\UI\\mesBox2.bmp"
+
+mb3                     BITMAP                  "..\\res\\UI\\mesBox3.bmp"
+
+mb4                     BITMAP                  "..\\res\\UI\\mesBox4.bmp"
+
+mb5                     BITMAP                  "..\\res\\UI\\mesBox5.bmp"
+
+mb6                     BITMAP                  "..\\res\\UI\\mesBox6.bmp"
+
+mb7                     BITMAP                  "..\\res\\UI\\mesBox7.bmp"
+
+mb8                     BITMAP                  "..\\res\\UI\\mesBox8.bmp"
+
+mb9                     BITMAP                  "..\\res\\UI\\mesBox9.bmp"
+
+mb10                    BITMAP                  "..\\res\\UI\\mesBox10.bmp"
+
+mb11                    BITMAP                  "..\\res\\UI\\mesBox11.bmp"
+
+ground1                 BITMAP                  "..\\res\\ground1.bmp"
+
+ground2                 BITMAP                  "..\\res\\ground2.bmp"
+
+ground3                 BITMAP                  "..\\res\\ground3.bmp"
+
+ground4                 BITMAP                  "..\\res\\ground4.bmp"
+
+ground5                 BITMAP                  "..\\res\\ground5.bmp"
+
+ground6                 BITMAP                  "..\\res\\ground6.bmp"
+
+ground7                 BITMAP                  "..\\res\\ground7.bmp"
+
+gameover0               BITMAP                  "..\\res\\UI\\gameover0.bmp"
+
+gameover2               BITMAP                  "..\\res\\UI\\gameover2.bmp"
+
+gameover3               BITMAP                  "..\\res\\UI\\gameover3.bmp"
+
+gameover4               BITMAP                  "..\\res\\UI\\gameover4.bmp"
+
+gameover5               BITMAP                  "..\\res\\UI\\gameover5.bmp"
+
+gameover6               BITMAP                  "..\\res\\UI\\gameover6.bmp"
+
+gameover7               BITMAP                  "..\\res\\UI\\gameover7.bmp"
+
+gameover8               BITMAP                  "..\\res\\UI\\gameover8.bmp"
+
+menu0                   BITMAP                  "..\\res\\UI\\menu0.bmp"
+
+menu1                   BITMAP                  "..\\res\\UI\\menu1.bmp"
+
+menu2                   BITMAP                  "..\\res\\UI\\menu2.bmp"
+
+menu3                   BITMAP                  "..\\res\\UI\\menu3.bmp"
+
+dameage                 BITMAP                  "..\\res\\death\\dameage.bmp"
+
+death1                  BITMAP                  "..\\res\\death\\death1.bmp"
+
+death2                  BITMAP                  "..\\res\\death\\death2.bmp"
+
+death3                  BITMAP                  "..\\res\\death\\death3.bmp"
+
+death4                  BITMAP                  "..\\res\\death\\death4.bmp"
+
+death5                  BITMAP                  "..\\res\\death\\death5.bmp"
+
+hp_0                    BITMAP                  "..\\res\\megaMan\\UI&weapan\\hp_0.bmp"
+
+hp_1                    BITMAP                  "..\\res\\megaMan\\UI&weapan\\hp_1.bmp"
+
+hp_button               BITMAP                  "..\\res\\megaMan\\UI&weapan\\hp_button.bmp"
+
+hp_top                  BITMAP                  "..\\res\\megaMan\\UI&weapan\\hp_top.bmp"
+
+s0                      BITMAP                  "..\\res\\megaMan\\stand\\s0.bmp"
+
+s1                      BITMAP                  "..\\res\\megaMan\\stand\\s1.bmp"
+
+s2                      BITMAP                  "..\\res\\megaMan\\stand\\s2.bmp"
+
+atk1_Rc                 BITMAP                  "..\\res\\unA_r\\attack1wep.bmp"
+
+atk2_Rc                 BITMAP                  "..\\res\\unA_r\\attack2wep.bmp"
+
+atk1_Lc                 BITMAP                  "..\\res\\unA_l\\attack1wep.bmp"
+
+atk2_Lc                 BITMAP                  "..\\res\\unA_l\\attack2wep.bmp"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //

@@ -126,6 +126,8 @@
       <DataExecutionPrevention>
       </DataExecutionPrevention>
       <TargetMachine>MachineX86</TargetMachine>
+      <HeapCommitSize>2000000</HeapCommitSize>
+      <StackReserveSize>2000000</StackReserveSize>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -261,6 +263,7 @@
     <ClCompile Include="Source\CBouncingBall.cpp" />
     <ClCompile Include="Source\CEraser.cpp" />
     <ClCompile Include="Source\CGameCharacter.cpp" />
+    <ClCompile Include="Source\Character.cpp" />
     <ClCompile Include="Source\CMap.cpp" />
     <ClCompile Include="Source\game.cpp">
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -282,6 +285,8 @@
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='UnitTest|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
+    <ClCompile Include="Source\Map.cpp" />
+    <ClCompile Include="Source\mesageBox.cpp" />
     <ClCompile Include="Source\StdAfx.cpp">
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -309,11 +314,14 @@
     <ClInclude Include="Source\CBouncingBall.h" />
     <ClInclude Include="Source\CEraser.h" />
     <ClInclude Include="Source\CGameCharacter.h" />
+    <ClInclude Include="Source\Character.h" />
     <ClInclude Include="Source\CMap.h" />
     <ClInclude Include="Source\game.h" />
     <ClInclude Include="Source\gameDoc.h" />
     <ClInclude Include="Source\gameView.h" />
     <ClInclude Include="Source\MainFrm.h" />
+    <ClInclude Include="Source\Map.h" />
+    <ClInclude Include="Source\mesageBox.h" />
     <ClInclude Include="Source\Resource.h" />
     <ClInclude Include="Source\StdAfx.h" />
     <ClInclude Include="Source\gamelib.h" />
@@ -328,11 +336,107 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\bitmap3.bmp" />
+    <Image Include="RES\death\dameage.bmp" />
+    <Image Include="RES\death\death1.bmp" />
+    <Image Include="RES\death\death2.bmp" />
+    <Image Include="RES\death\death3.bmp" />
+    <Image Include="RES\death\death4.bmp" />
+    <Image Include="RES\death\death5.bmp" />
     <Image Include="RES\dog1.bmp" />
     <Image Include="RES\dog1.png" />
+    <Image Include="RES\ground1.bmp" />
+    <Image Include="RES\ground2.bmp" />
+    <Image Include="RES\ground3.bmp" />
+    <Image Include="RES\ground4.bmp" />
+    <Image Include="RES\ground5.bmp" />
+    <Image Include="RES\ground6.bmp" />
+    <Image Include="RES\ground7.bmp" />
+    <Image Include="RES\m1.bmp" />
     <Image Include="RES\map01.bmp" />
+    <Image Include="RES\megaMan\stand\s0.bmp" />
+    <Image Include="RES\megaMan\stand\s1.bmp" />
+    <Image Include="RES\megaMan\stand\s2.bmp" />
+    <Image Include="RES\megaMan\UI&amp;weapan\hp_0.bmp" />
+    <Image Include="RES\megaMan\UI&amp;weapan\hp_1.bmp" />
+    <Image Include="RES\megaMan\UI&amp;weapan\hp_button.bmp" />
+    <Image Include="RES\megaMan\UI&amp;weapan\hp_top.bmp" />
+    <Image Include="RES\monster\m1_0.bmp" />
+    <Image Include="RES\monster\m1_1.bmp" />
+    <Image Include="RES\monster\m1_2.bmp" />
+    <Image Include="RES\monster\m1_3.bmp" />
+    <Image Include="RES\monster\m1_4.bmp" />
+    <Image Include="RES\monster\m1_5.bmp" />
     <Image Include="RES\SrollingTestMap.bmp" />
     <Image Include="RES\testMonster.bmp" />
+    <Image Include="RES\UI\gameover0.bmp" />
+    <Image Include="RES\UI\gameover2.bmp" />
+    <Image Include="RES\UI\gameover3.bmp" />
+    <Image Include="RES\UI\gameover4.bmp" />
+    <Image Include="RES\UI\gameover5.bmp" />
+    <Image Include="RES\UI\gameover6.bmp" />
+    <Image Include="RES\UI\gameover7.bmp" />
+    <Image Include="RES\UI\gameover8.bmp" />
+    <Image Include="RES\UI\HP0.bmp" />
+    <Image Include="RES\UI\HP1.bmp" />
+    <Image Include="RES\UI\HP10.bmp" />
+    <Image Include="RES\UI\HP11.bmp" />
+    <Image Include="RES\UI\HP12.bmp" />
+    <Image Include="RES\UI\HP13.bmp" />
+    <Image Include="RES\UI\HP14.bmp" />
+    <Image Include="RES\UI\HP15.bmp" />
+    <Image Include="RES\UI\HP16.bmp" />
+    <Image Include="RES\UI\HP2.bmp" />
+    <Image Include="RES\UI\HP3.bmp" />
+    <Image Include="RES\UI\HP4.bmp" />
+    <Image Include="RES\UI\HP5.bmp" />
+    <Image Include="RES\UI\HP6.bmp" />
+    <Image Include="RES\UI\HP7.bmp" />
+    <Image Include="RES\UI\HP8.bmp" />
+    <Image Include="RES\UI\HP9.bmp" />
+    <Image Include="RES\UI\menu0.bmp" />
+    <Image Include="RES\UI\menu1.bmp" />
+    <Image Include="RES\UI\menu2.bmp" />
+    <Image Include="RES\UI\menu3.bmp" />
+    <Image Include="RES\UI\mesBox0.bmp" />
+    <Image Include="RES\UI\mesBox1.bmp" />
+    <Image Include="RES\UI\mesBox10.bmp" />
+    <Image Include="RES\UI\mesBox11.bmp" />
+    <Image Include="RES\UI\mesBox2.bmp" />
+    <Image Include="RES\UI\mesBox3.bmp" />
+    <Image Include="RES\UI\mesBox4.bmp" />
+    <Image Include="RES\UI\mesBox5.bmp" />
+    <Image Include="RES\UI\mesBox6.bmp" />
+    <Image Include="RES\UI\mesBox7.bmp" />
+    <Image Include="RES\UI\mesBox8.bmp" />
+    <Image Include="RES\UI\mesBox9.bmp" />
+    <Image Include="RES\unA_l\attack1.bmp" />
+    <Image Include="RES\unA_l\attack1wep.bmp" />
+    <Image Include="RES\unA_l\attack2.bmp" />
+    <Image Include="RES\unA_l\attack2wep.bmp" />
+    <Image Include="RES\unA_l\j1.bmp" />
+    <Image Include="RES\unA_l\j2.bmp" />
+    <Image Include="RES\unA_l\p0.bmp" />
+    <Image Include="RES\unA_l\p1.bmp" />
+    <Image Include="RES\unA_l\p2.bmp" />
+    <Image Include="RES\unA_l\p3.bmp" />
+    <Image Include="RES\unA_l\p4.bmp" />
+    <Image Include="RES\unA_l\p5.bmp" />
+    <Image Include="RES\unA_l\p6.bmp" />
+    <Image Include="RES\unA_r\attack1.bmp" />
+    <Image Include="RES\unA_r\attack1wep.bmp" />
+    <Image Include="RES\unA_r\attack2.bmp" />
+    <Image Include="RES\unA_r\attack2wep.bmp" />
+    <Image Include="RES\unA_r\j1.bmp" />
+    <Image Include="RES\unA_r\j2.bmp" />
+    <Image Include="RES\unA_r\p0.bmp" />
+    <Image Include="RES\unA_r\p1.bmp" />
+    <Image Include="RES\unA_r\p2.bmp" />
+    <Image Include="RES\unA_r\p3.bmp" />
+    <Image Include="RES\unA_r\p4.bmp" />
+    <Image Include="RES\unA_r\p5.bmp" />
+    <Image Include="RES\unA_r\p6.bmp" />
+    <Image Include="RES\wep\spear_l.bmp" />
+    <Image Include="RES\wep\spear_r.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

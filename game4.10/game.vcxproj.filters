@@ -135,6 +135,13 @@
     <ClCompile Include="Source\CGameCharacter.cpp">
       <Filter>MyGame</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Character.cpp">
+      <Filter>MyGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Map.cpp">
+      <Filter>MyGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\mesageBox.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\audio.h">
@@ -179,6 +186,13 @@
     <ClInclude Include="Source\CGameCharacter.h">
       <Filter>MyGame</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Character.h">
+      <Filter>MyGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Map.h">
+      <Filter>MyGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\mesageBox.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Source\game.rc">
@@ -200,6 +214,294 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="RES\testMonster.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\m1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_r\p0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_r\p1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_r\p2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_r\p3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_r\p4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_r\p5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_r\p6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_l\p0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_l\p1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_l\p2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_l\p3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_l\p4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_l\p5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_l\p6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_r\j1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_r\j2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_l\j1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_l\j2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\HP16.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\HP0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\HP1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\HP2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\HP3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\HP4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\HP5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\HP6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\HP7.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\HP8.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\HP9.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\HP10.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\HP11.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\HP12.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\HP13.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\HP14.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\HP15.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster\m1_0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster\m1_1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster\m1_2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster\m1_3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster\m1_4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster\m1_5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\wep\spear_l.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\wep\spear_r.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_l\attack1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_l\attack2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_r\attack1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_r\attack2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesBox0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesBox1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesBox2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesBox3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesBox4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesBox5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesBox6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesBox7.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesBox8.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesBox9.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesBox10.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesBox11.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\ground1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\ground2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\ground3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\ground4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\ground5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\ground6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\ground7.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\gameover0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\gameover2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\gameover3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\gameover4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\gameover5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\gameover6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\gameover7.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\gameover8.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\menu0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\menu1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\menu2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\menu3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\death\dameage.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\death\death1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\death\death2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\death\death3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\death\death4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\death\death5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\UI&amp;weapan\hp_0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\UI&amp;weapan\hp_1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\UI&amp;weapan\hp_button.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\UI&amp;weapan\hp_top.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\stand\s0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\stand\s1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\stand\s2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_r\attack1wep.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_r\attack2wep.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_l\attack1wep.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_l\attack2wep.bmp">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
