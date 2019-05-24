@@ -46,8 +46,8 @@ namespace game_framework
 		void OnShow();
 
 	private:
-		CAnimation animation[2][10], bullet[2][5];//[megaman][LR][num] 選擇左右  選擇模型
-		
+		CAnimation animation[2][2][10], bullet[2][5];//[MegaMan][LR][num] X模式 選擇左右  選擇模型
+		CAnimation animationX[2][10];
 		int healthPoints;
 		int LR, moveCount, moveDistence,shootDistance;
 

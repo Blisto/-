@@ -37,68 +37,110 @@ namespace game_framework
 	{	//using in test
 		//character.LoadBitmap(TestDog, RGB(255, 255, 255));
 
-		//[LR][num] LR=0:¥k  LR=1:¥ª        
-		//num:0 ¯¸«º   :1 ¶]    :2 ¸õ1   :3 ¸õ2     :4§ðÀ»(»·   :5 ¦º¤`   :6§ðÀ»(ªñ
+		//[MegaMan][LR][num] LR=0:´Â¥k  LR=1:´Â¥ª        
+		//num:0 ¯¸«º   :1 ¶]    :2 ¸õ[¤W¤É]   :3 ¸õ[¸¨¤U]     :4§ðÀ»[»·]   :5 ¦º¤`   :6§ðÀ»[ªñ]
 
-		//animation[1][0][0].AddBitmap(s0, RGB(255, 255, 255));
-		//animation[1][0][0].AddBitmap(s1, RGB(255, 255, 255));
-		//animation[1][0][0].AddBitmap(s2, RGB(255, 255, 255));
-
-
-		animation[0][0].AddBitmap(R_P0, RGB(255, 255, 255));
-		animation[0][1].AddBitmap(R_P1, RGB(255, 255, 255));
-		animation[0][1].AddBitmap(R_P2, RGB(255, 255, 255));
-		animation[0][1].AddBitmap(R_P3, RGB(255, 255, 255));
-		animation[0][1].AddBitmap(R_P4, RGB(255, 255, 255));
-		animation[0][1].AddBitmap(R_P5, RGB(255, 255, 255));
-		animation[0][1].AddBitmap(R_P6, RGB(255, 255, 255));
-		animation[0][1].SetDelayCount(3);
-		animation[0][4].AddBitmap(atk1_R, RGB(255, 255, 255));
-		animation[0][4].AddBitmap(atk2_R, RGB(255, 255, 255));
-		animation[0][4].AddBitmap(atk2_R, RGB(255, 255, 255));
-		animation[0][4].SetDelayCount(10);
-
-		animation[1][0].AddBitmap(L_P0, RGB(255, 255, 255));
-		animation[1][1].AddBitmap(L_P1, RGB(255, 255, 255));
-		animation[1][1].AddBitmap(L_P2, RGB(255, 255, 255));
-		animation[1][1].AddBitmap(L_P3, RGB(255, 255, 255));
-		animation[1][1].AddBitmap(L_P4, RGB(255, 255, 255));
-		animation[1][1].AddBitmap(L_P5, RGB(255, 255, 255));
-		animation[1][1].AddBitmap(L_P6, RGB(255, 255, 255));
-		animation[1][1].SetDelayCount(3);
-		animation[1][4].AddBitmap(atk1_L, RGB(255, 255, 255));
-		animation[1][4].AddBitmap(atk2_L, RGB(255, 255, 255));
-		animation[1][4].AddBitmap(atk2_L, RGB(255, 255, 255));
-		animation[1][4].SetDelayCount(10);
-
-		animation[0][2].AddBitmap(R_J1, RGB(255, 255, 255));
-		animation[0][3].AddBitmap(R_J2, RGB(255, 255, 255));
-		animation[1][2].AddBitmap(L_J1, RGB(255, 255, 255));
-		animation[1][3].AddBitmap(L_J2, RGB(255, 255, 255));
-
-		animation[0][5].AddBitmap(dameage, RGB(255, 255, 255));
-		animation[0][5].AddBitmap(death1, RGB(255, 255, 255));
-		animation[0][5].AddBitmap(death2, RGB(255, 255, 255));
-		animation[0][5].AddBitmap(death3, RGB(255, 255, 255));
-		animation[0][5].AddBitmap(death4, RGB(255, 255, 255));
-		animation[0][5].AddBitmap(death5, RGB(255, 255, 255));
-		animation[0][5].AddBitmap(death5, RGB(255, 255, 255));
-		animation[0][5].SetDelayCount(20);
-
-		animation[0][6].AddBitmap(atk1_Rc, RGB(255, 255, 255));
-		animation[0][6].AddBitmap(atk2_Rc, RGB(255, 255, 255));
-		animation[0][6].AddBitmap(atk2_Rc, RGB(255, 255, 255));
-		animation[0][6].SetDelayCount(10);
+		////////////////////////////////////////////////////////////////
+		//X
+		animationX[0][0].AddBitmap(R_X_s0, RGB(255, 255, 255));
+		animationX[0][0].AddBitmap(R_X_s1, RGB(255, 255, 255));
+		animationX[0][0].AddBitmap(R_X_s2, RGB(255, 255, 255));
+		animationX[0][0].SetDelayCount(3);
 
 
-		animation[1][6].AddBitmap(atk1_Lc, RGB(255, 255, 255));
-		animation[1][6].AddBitmap(atk2_Lc, RGB(255, 255, 255));
-		animation[1][6].AddBitmap(atk2_Lc, RGB(255, 255, 255));
-		animation[1][6].SetDelayCount(10);
+		animationX[0][1].AddBitmap(R_X_r0, RGB(255, 255, 255));
+		animationX[0][1].AddBitmap(R_X_r1, RGB(255, 255, 255));
+		animationX[0][1].AddBitmap(R_X_r2, RGB(255, 255, 255));
+		animationX[0][1].AddBitmap(R_X_r3, RGB(255, 255, 255));
+		animationX[0][1].AddBitmap(R_X_r4, RGB(255, 255, 255));
+		animationX[0][1].AddBitmap(R_X_r5, RGB(255, 255, 255));
+		animationX[0][1].AddBitmap(R_X_r6, RGB(255, 255, 255));
+		animationX[0][1].AddBitmap(R_X_r7, RGB(255, 255, 255));
+		animationX[0][1].AddBitmap(R_X_r8, RGB(255, 255, 255));
+		animationX[0][1].AddBitmap(R_X_r9, RGB(255, 255, 255));
+		animationX[0][1].AddBitmap(R_X_r10, RGB(255, 255, 255));
+		animationX[0][1].AddBitmap(R_X_r11, RGB(255, 255, 255));
+		animationX[0][1].SetDelayCount(3);
+
+		animationX[0][2].AddBitmap(R_X_j0, RGB(255, 255, 255));
+		animationX[0][2].AddBitmap(R_X_j1, RGB(255, 255, 255));
+		animationX[0][2].AddBitmap(R_X_j2, RGB(255, 255, 255));
+		animationX[0][2].SetDelayCount(3);
+
+		animationX[0][3].AddBitmap(R_X_j3, RGB(255, 255, 255));
+		animationX[0][3].AddBitmap(R_X_j4, RGB(255, 255, 255));
+		animationX[0][3].AddBitmap(R_X_j5, RGB(255, 255, 255));
+		animationX[0][3].SetDelayCount(3);
+
+		animationX[0][4].AddBitmap(R_X_a0f, RGB(255, 255, 255));
+		animationX[0][4].AddBitmap(R_X_a1f, RGB(255, 255, 255));
+		animationX[0][4].SetDelayCount(3);
+
+		animationX[0][6].AddBitmap(R_X_a0c, RGB(255, 255, 255));
+		animationX[0][6].AddBitmap(R_X_a1c, RGB(255, 255, 255));
+		animationX[0][6].AddBitmap(R_X_a2c, RGB(255, 255, 255));
+		animationX[0][6].AddBitmap(R_X_a3c, RGB(255, 255, 255));
+		animationX[0][6].SetDelayCount(3);
+		////////////////////////////////////////////////////////////////
+		//Arthur
+		//¥k
+		animation[0][0][0].AddBitmap(R_P0, RGB(255, 255, 255));
+
+		animation[0][0][1].AddBitmap(R_P1, RGB(255, 255, 255));
+		animation[0][0][1].AddBitmap(R_P2, RGB(255, 255, 255));
+		animation[0][0][1].AddBitmap(R_P3, RGB(255, 255, 255));
+		animation[0][0][1].AddBitmap(R_P4, RGB(255, 255, 255));
+		animation[0][0][1].AddBitmap(R_P5, RGB(255, 255, 255));
+		animation[0][0][1].AddBitmap(R_P6, RGB(255, 255, 255));
+		animation[0][0][1].SetDelayCount(3);
+		
+		animation[0][0][4].AddBitmap(atk1_R, RGB(255, 255, 255));
+		animation[0][0][4].AddBitmap(atk2_R, RGB(255, 255, 255));
+		animation[0][0][4].AddBitmap(atk2_R, RGB(255, 255, 255));
+		animation[0][0][4].SetDelayCount(10);
+
+		animation[0][0][2].AddBitmap(R_J1, RGB(255, 255, 255));
+		animation[0][0][3].AddBitmap(R_J2, RGB(255, 255, 255));
+
+		animation[0][0][6].AddBitmap(atk1_Rc, RGB(255, 255, 255));
+		animation[0][0][6].AddBitmap(atk2_Rc, RGB(255, 255, 255));
+		animation[0][0][6].AddBitmap(atk2_Rc, RGB(255, 255, 255));
+		animation[0][0][6].SetDelayCount(10);
+		//¥ª
+		animation[0][1][0].AddBitmap(L_P0, RGB(255, 255, 255));
+
+		animation[0][1][1].AddBitmap(L_P1, RGB(255, 255, 255));
+		animation[0][1][1].AddBitmap(L_P2, RGB(255, 255, 255));
+		animation[0][1][1].AddBitmap(L_P3, RGB(255, 255, 255));
+		animation[0][1][1].AddBitmap(L_P4, RGB(255, 255, 255));
+		animation[0][1][1].AddBitmap(L_P5, RGB(255, 255, 255));
+		animation[0][1][1].AddBitmap(L_P6, RGB(255, 255, 255));
+		animation[0][1][1].SetDelayCount(3);
+
+		animation[0][1][4].AddBitmap(atk1_L, RGB(255, 255, 255));
+		animation[0][1][4].AddBitmap(atk2_L, RGB(255, 255, 255));
+		animation[0][1][4].AddBitmap(atk2_L, RGB(255, 255, 255));
+		animation[0][1][4].SetDelayCount(10);
+
+		animation[0][1][2].AddBitmap(L_J1, RGB(255, 255, 255));
+		animation[0][1][3].AddBitmap(L_J2, RGB(255, 255, 255));
+
+		animation[0][0][5].AddBitmap(dameage, RGB(255, 255, 255));
+		animation[0][0][5].AddBitmap(death1, RGB(255, 255, 255));
+		animation[0][0][5].AddBitmap(death2, RGB(255, 255, 255));
+		animation[0][0][5].AddBitmap(death3, RGB(255, 255, 255));
+		animation[0][0][5].AddBitmap(death4, RGB(255, 255, 255));
+		animation[0][0][5].AddBitmap(death5, RGB(255, 255, 255));
+		animation[0][0][5].AddBitmap(death5, RGB(255, 255, 255));
+		animation[0][0][5].SetDelayCount(20);
+
+		animation[0][1][6].AddBitmap(atk1_Lc, RGB(255, 255, 255));
+		animation[0][1][6].AddBitmap(atk2_Lc, RGB(255, 255, 255));
+		animation[0][1][6].AddBitmap(atk2_Lc, RGB(255, 255, 255));
+		animation[0][1][6].SetDelayCount(10);
 
 		bullet[0][0].AddBitmap(spear_r, RGB(255, 255, 255));
 		bullet[1][0].AddBitmap(spear_L, RGB(255, 255, 255));
-
 	}
 
 	void Character::setMovingRight(bool flag)
@@ -181,18 +223,18 @@ namespace game_framework
 
 	int Character::getHeight()
 	{
-		return animation[chLR][chNum].Height();
+		return animation[0][chLR][chNum].Height();
 	}
 
 	int Character::getWidth()
 	{
-		return animation[chLR][chNum].Width();
+		return animation[0][chLR][chNum].Width();
 	}
 
 	bool Character::getAtkIsLast(int Anum) 
 	{
 		//if (animation[chLR][Anum].IsFinalBitmap() == true)animation[chLR][Anum].Reset();
-		return animation[chLR][Anum].IsFinalBitmap();
+		return animation[0][chLR][Anum].IsFinalBitmap();
 	}
 
 	bool Character::getAttack()
@@ -292,18 +334,18 @@ namespace game_framework
 			chLR = 0; chNum = 0;
 		}
 
-		animation[0][0].AddBitmap(M1_5, RGB(255, 255, 255));
-		animation[0][1].AddBitmap(M1_5, RGB(255, 255, 255));
-		animation[0][1].AddBitmap(M1_4, RGB(255, 255, 255));
-		animation[0][1].AddBitmap(M1_3, RGB(255, 255, 255));
+		animation[0][0][0].AddBitmap(M1_5, RGB(255, 255, 255));
+		animation[0][0][1].AddBitmap(M1_5, RGB(255, 255, 255));
+		animation[0][0][1].AddBitmap(M1_4, RGB(255, 255, 255));
+		animation[0][0][1].AddBitmap(M1_3, RGB(255, 255, 255));
 
-		animation[0][1].SetDelayCount(5);
+		animation[0][0][1].SetDelayCount(5);
 
-		animation[1][0].AddBitmap(M1_0, RGB(255, 255, 255));
-		animation[1][1].AddBitmap(M1_0, RGB(255, 255, 255));
-		animation[1][1].AddBitmap(M1_1, RGB(255, 255, 255));
-		animation[1][1].AddBitmap(M1_2, RGB(255, 255, 255));
-		animation[1][1].SetDelayCount(5);
+		animation[0][1][0].AddBitmap(M1_0, RGB(255, 255, 255));
+		animation[0][1][1].AddBitmap(M1_0, RGB(255, 255, 255));
+		animation[0][1][1].AddBitmap(M1_1, RGB(255, 255, 255));
+		animation[0][1][1].AddBitmap(M1_2, RGB(255, 255, 255));
+		animation[0][1][1].SetDelayCount(5);
 
 
 	}
@@ -333,7 +375,7 @@ namespace game_framework
 			if (LR == 1) {
 				this->tx -= 4; moveDistence += 4;
 			}
-			animation[chLR][chNum].OnMove();
+			animation[0][chLR][chNum].OnMove();
 			moveCount = 2;
 		}
 	}
@@ -376,8 +418,8 @@ namespace game_framework
 		if (isMovingRight == true) { this->x += 1; }
 		if (isAttack == true && this->getAtkIsLast(4) == true&& this->getshootDistance() == 0) {
 			isAttack = false; 
-			animation[0][4].Reset(); 
-			animation[1][4].Reset();
+			animation[0][0][4].Reset();
+			animation[0][1][4].Reset();
 			shootDistance = 400;
 			bx = this->x + this->getWidth() -30;
 			by = this->y + 15;
@@ -385,11 +427,16 @@ namespace game_framework
 		}
 		if (isAttack2 == true && this->getAtkIsLast(6) == true) {
 			isAttack2 = false;
-			animation[0][6].Reset();
-			animation[1][6].Reset();
+			animation[0][0][6].Reset();
+			animation[0][1][6].Reset();
 		}
 		if (shootDistance != 0) { this->bulletMove(); }
-		animation[chLR][chNum].OnMove();
+		
+		//animation[1][0][chNum].OnMove();
+		
+
+		animation[0][chLR][chNum].OnMove();
+
 
 	}
 	void  Character::bulletMove()
@@ -408,8 +455,15 @@ namespace game_framework
 	}
 	void Character::OnShow()
 	{
-		animation[chLR][chNum].SetTopLeft(x, y);
-		animation[chLR][chNum].OnShow();
+
+
+			//animation[0][chLR][chNum].SetTopLeft(x, y);
+			//animation[0][chLR][chNum].OnShow();
+
+			animationX[0][0].SetTopLeft(100, 100);
+			animationX[0][0].OnShow();
+
+
 		if (isHit == false&&shootDistance > 0) //¤l¼u
 		{
 			bullet[0][0].OnShow();
