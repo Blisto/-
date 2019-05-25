@@ -16,72 +16,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Res\ball.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="RES\bmp0.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="RES\bmp1.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="RES\bmp10.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="RES\bmp2.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="RES\bmp3.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="RES\bmp4.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="RES\bmp5.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="RES\bmp6.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="RES\bmp7.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="RES\bmp8.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="RES\bmp9.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="RES\center.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="RES\continue.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="Res\corner.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="RES\eraser1.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="RES\eraser2.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="RES\eraser3.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="res\game.ico">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="res\game.rc2">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="RES\gamecurs.cur">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="res\gameDoc.ico">
-      <Filter>Resource Files</Filter>
-    </None>
     <None Include="RES\help.bmp">
       <Filter>Resource Files</Filter>
     </None>
@@ -92,6 +26,75 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="res\Toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..Res\ball.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..RES\bmp0.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..RES\bmp1.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..RES\bmp2.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..RES\bmp3.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..RES\bmp4.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..RES\bmp5.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..RES\bmp6.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..RES\bmp7.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..RES\bmp8.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..RES\bmp9.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..RES\bmp10.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..RES\center.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..RES\continue.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..Res\corner.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..RES\eraser1.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..RES\eraser2.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..RES\eraser3.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..res\game.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..res\game.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..RES\gamecurs.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..res\gameDoc.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\gamecurs.cur">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
@@ -203,16 +206,10 @@
     <Image Include="RES\SrollingTestMap.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="res\bitmap3.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="RES\map01.bmp">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="RES\dog1.png" />
-    <Image Include="RES\dog1.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="RES\testMonster.bmp">
       <Filter>Resource Files</Filter>
     </Image>
@@ -348,18 +345,6 @@
     <Image Include="RES\wep\spear_r.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="RES\unA_l\attack1.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="RES\unA_l\attack2.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="RES\unA_r\attack1.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="RES\unA_r\attack2.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="RES\UI\mesBox0.bmp">
       <Filter>Resource Files</Filter>
     </Image>
@@ -396,51 +381,6 @@
     <Image Include="RES\UI\mesBox11.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="RES\ground1.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="RES\ground2.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="RES\ground3.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="RES\ground4.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="RES\ground5.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="RES\ground6.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="RES\ground7.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="RES\UI\gameover0.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="RES\UI\gameover2.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="RES\UI\gameover3.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="RES\UI\gameover4.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="RES\UI\gameover5.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="RES\UI\gameover6.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="RES\UI\gameover7.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="RES\UI\gameover8.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="RES\UI\menu0.bmp">
       <Filter>Resource Files</Filter>
     </Image>
@@ -451,24 +391,6 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="RES\UI\menu3.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="RES\death\dameage.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="RES\death\death1.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="RES\death\death2.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="RES\death\death3.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="RES\death\death4.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="RES\death\death5.bmp">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="RES\megaMan\UI&amp;weapan\hp_0.bmp">
@@ -492,16 +414,340 @@
     <Image Include="RES\megaMan\stand\s2.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="RES\unA_r\attack1wep.bmp">
+    <Image Include="..RES\unA_l\attack1.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="RES\unA_r\attack2wep.bmp">
+    <Image Include="..RES\unA_r\attack1wep.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="RES\unA_l\attack1wep.bmp">
+    <Image Include="..RES\unA_l\attack1wep.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="RES\unA_l\attack2wep.bmp">
+    <Image Include="..RES\unA_r\attack2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..RES\unA_l\attack2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..RES\unA_l\attack2wep.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..RES\unA_r\attack2wep.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..res\bitmap3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..RES\death\dameage.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..RES\death\death1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..RES\death\death2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..RES\death\death3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..RES\death\death4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..RES\death\death5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..RES\dog1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..RES\UI\gameover0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..RES\UI\gameover2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..RES\UI\gameover3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..RES\UI\gameover4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..RES\UI\gameover5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..RES\UI\gameover6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..RES\UI\gameover7.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..RES\UI\gameover8.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..RES\ground1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..RES\ground2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..RES\ground3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..RES\ground4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..RES\ground5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..RES\ground6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..RES\ground7.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\unA_r\attack1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ball.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\eraser1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\corner.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp7.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp8.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp9.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bmp10.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\center.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\eraser2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\eraser3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\continue.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bitmap3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\dog1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\unA_l\attack1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\unA_l\attack2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\unA_r\attack2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ground1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ground2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ground3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ground4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ground5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ground6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ground7.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\UI\gameover0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\UI\gameover2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\UI\gameover3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\UI\gameover4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\UI\gameover5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\UI\gameover6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\UI\gameover7.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\UI\gameover8.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\death\dameage.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\death\death1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\death\death2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\death\death3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\death\death4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\death\death5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\unA_r\attack1wep.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\unA_r\attack2wep.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\unA_l\attack1wep.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\unA_l\attack2wep.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\game.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\gameDoc.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\megaMan\R\stand\s0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\megaMan\R\stand\s1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\megaMan\R\stand\s2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\megaMan\UI\hp_0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\megaMan\UI\hp_1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\megaMan\UI\hp_button.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\megaMan\UI\hp_top.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\run\r0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\run\r1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\run\r2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\run\r3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\run\r4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\run\r5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\run\r6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\run\r7.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\run\r8.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\run\r9.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\run\r10.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\run\r11.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\jump\j0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\jump\j1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\jump\j2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\jump\j3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\jump\j4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\jump\j5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\atk_far\a0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\atk_far\a1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\atk_close\a0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\atk_close\a1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\atk_close\a2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\atk_close\a3.bmp">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
