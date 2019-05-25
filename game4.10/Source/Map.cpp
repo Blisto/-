@@ -462,8 +462,8 @@ namespace game_framework {
 
 			if ((1 + cy0 - i - 1 )>=0&&i>=0&&UDRL == 0)for (int j = 0; j <= cw; j++)if (mapData[0][1 + cy0 - i-1][1 + cx0 + j] == 1 &&distanceBox[0]>i)distanceBox[0] = i;
 			if (UDRL == 1)for (int j = 0; j <= cw; j++)if (mapData[0][1 + cy2 + i+1][1 + cx2 + j] == 1 && distanceBox[1]>i)distanceBox[1] = i;
-			if (i >= 0 && UDRL == 2)for (int j = 1; j <= ch-1; j++)if (mapData[0][1 + cy0 + j][1 + cx0 - i-1] == 1 && distanceBox[2]>i)distanceBox[2] = i;
-			if (i >= 0 && UDRL == 3)for (int j = 1; j <= ch-1; j++)if (mapData[0][1 + cy1 + j][1 + cx1 + i+1] == 1 && distanceBox[3]>i)distanceBox[3] = i;
+			if ((1 + cy0 ) >= 0 && i >= 0 && UDRL == 2)for (int j = 1; j <= ch-1; j++)if (mapData[0][1 + cy0 + j][1 + cx0 - i-1] == 1 && distanceBox[2]>i)distanceBox[2] = i;
+			if ((1 + cy1 ) >= 0 && i >= 0 && UDRL == 3)for (int j = 1; j <= ch-1; j++)if (mapData[0][1 + cy1 + j][1 + cx1 + i+1] == 1 && distanceBox[3]>i)distanceBox[3] = i;
 
 		}
 	}
@@ -580,10 +580,10 @@ namespace game_framework {
 			p1->Attack(monster[target]);
 			this->chNum = 0;
 		}
-		TRACE("%d %d\n", target, monster[target]->getHP());
+		//TRACE("%d %d\n", target, monster[target]->getHP());
 		p1->OnMove(chLR,chNum);
-		monster[0]->AutoMove(this->y,this->x);
-		monster[1]->AutoMove(this->y, this->x);
+		monster[0]->AutoMove(this->y, this->x, 0, p1->getX(), p1->getY());
+		monster[1]->AutoMove(this->y, this->x,1, p1->getX(), p1->getY());
 		p1->ImpactCheck(monster[target]);
 		//p1->ImpactCheck(monster[1]);
 		facai->OnMove();
