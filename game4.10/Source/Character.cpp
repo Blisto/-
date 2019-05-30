@@ -376,7 +376,7 @@ namespace game_framework
 				if (LR == 1) {
 					this->tx -= 4; moveDistence += 4;
 				}
-				animation[chLR][chNum].OnMove();
+				animation[0][chLR][chNum].OnMove();
 				moveCount = 2;
 			}
 		}
@@ -408,14 +408,13 @@ namespace game_framework
 					else { this->tx -= 4; moveDistence += 4; }
 				}
 
-				animation[chLR][chNum].OnMove();
+				animation[0][chLR][chNum].OnMove();
 				moveCount = 2;
 			}
-<<<<<<< HEAD:新增資料夾/Source/Character.cpp
-=======
+
 			animation[0][chLR][chNum].OnMove();
 			moveCount = 2;
->>>>>>> 2c91df05c316aaac117f0b052367c85e4c511858:game4.10/Source/Character.cpp
+
 		}
 	}
 
@@ -471,7 +470,7 @@ namespace game_framework
 		}
 		if (shootDistance != 0) { this->bulletMove(); }
 		
-		//animation[1][0][chNum].OnMove();
+
 		
 
 		animation[0][chLR][chNum].OnMove();
@@ -496,11 +495,10 @@ namespace game_framework
 	{
 
 
-			//animation[0][chLR][chNum].SetTopLeft(x, y);
-			//animation[0][chLR][chNum].OnShow();
+			animation[0][chLR][chNum].SetTopLeft(x, y);
+			animation[0][chLR][chNum].OnShow();
 
-			animationX[0][0].SetTopLeft(100, 100);
-			animationX[0][0].OnShow();
+
 
 
 		if (isHit == false&&shootDistance > 0) //�l�u
