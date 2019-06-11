@@ -62,14 +62,6 @@ END
 // Bitmap
 //
 
-IDB_BALL                BITMAP                  "..\\res\\ball.bmp"
-
-IDB_ERASER1             BITMAP                  "..\\res\\eraser1.bmp"
-
-IDB_BACKGROUND          BITMAP                  "..\\res\\ntutcsie.bmp"
-
-IDB_CORNER              BITMAP                  "..\\res\\corner.bmp"
-
 IDB_0                   BITMAP                  "..\\res\\bmp0.bmp"
 
 IDB_1                   BITMAP                  "..\\res\\bmp1.bmp"
@@ -92,27 +84,15 @@ IDB_9                   BITMAP                  "..\\res\\bmp9.bmp"
 
 IDB_MINUS               BITMAP                  "..\\res\\bmp10.bmp"
 
-IDB_CENTER              BITMAP                  "..\\res\\center.bmp"
-
-IDB_ERASER2             BITMAP                  "..\\res\\eraser2.bmp"
-
-IDB_ERASER3             BITMAP                  "..\\res\\eraser3.bmp"
-
 IDB_CONTINUE            BITMAP                  "..\\res\\continue.bmp"
 
 IDB_HELP                BITMAP                  "..\\res\\help.bmp"
 
 IDB_LOADING             BITMAP                  "..\\res\\loading.bmp"
 
-SCROLLINGTEST           BITMAP                  "..\\res\\SrollingTestMap.bmp"
-
-IDB_BITMAP3             BITMAP                  "..\\res\\bitmap3.bmp"
-
 MAP01                   BITMAP                  "..\\res\\map01.bmp"
 
 TestDog                 BITMAP                  "..\\res\\dog1.bmp"
-
-monsterTest             BITMAP                  "..\\RES\\testMonster.bmp"
 
 m1                      BITMAP                  "..\\res\\m1.bmp"
 
@@ -306,8 +286,6 @@ atk1_Lc                 BITMAP                  "..\\res\\unA_l\\attack1wep.bmp"
 
 atk2_Lc                 BITMAP                  "..\\res\\unA_l\\attack2wep.bmp"
 
-R_X_r0                  BITMAP                  "..\\res\\megaMan\\R\\run\\r0.bmp"
-
 R_X_r1                  BITMAP                  "..\\res\\megaMan\\R\\run\\r1.bmp"
 
 R_X_r2                  BITMAP                  "..\\res\\megaMan\\R\\run\\r2.bmp"
@@ -340,8 +318,6 @@ R_X_j3                  BITMAP                  "..\\res\\megaMan\\R\\jump\\j3.b
 
 R_X_j4                  BITMAP                  "..\\res\\megaMan\\R\\jump\\j4.bmp"
 
-R_X_j5                  BITMAP                  "..\\res\\megaMan\\R\\jump\\j5.bmp"
-
 R_X_a0f                 BITMAP                  "..\\res\\megaMan\\R\\atk_far\\a0.bmp"
 
 R_X_a1f                 BITMAP                  "..\\res\\megaMan\\R\\atk_far\\a1.bmp"
@@ -353,6 +329,564 @@ R_X_a1c                 BITMAP                  "..\\res\\megaMan\\R\\atk_close\
 R_X_a2c                 BITMAP                  "..\\res\\megaMan\\R\\atk_close\\a2.bmp"
 
 R_X_a3c                 BITMAP                  "..\\res\\megaMan\\R\\atk_close\\a3.bmp"
+
+R_X_a4c                 BITMAP                  "..\\res\\megaMan\\R\\atk_close\\a4.bmp"
+
+R_X_a5c                 BITMAP                  "..\\res\\megaMan\\R\\atk_close\\a5.bmp"
+
+R_X_a6c                 BITMAP                  "..\\res\\megaMan\\R\\atk_close\\a6.bmp"
+
+R_X_a7c                 BITMAP                  "..\\res\\megaMan\\R\\atk_close\\a7.bmp"
+
+R_X_a8c                 BITMAP                  "..\\res\\megaMan\\R\\atk_close\\a8.bmp"
+
+R_X_a9c                 BITMAP                  "..\\res\\megaMan\\R\\atk_close\\a9.bmp"
+
+R_X_ja0f                BITMAP                  "..\\res\\megaMan\\R\\j_atk_far\\up\\p41.bmp"
+
+R_X_ja1f                BITMAP                  "..\\res\\megaMan\\R\\j_atk_far\\up\\p42.bmp"
+
+R_X_ja2f                BITMAP                  "..\\res\\megaMan\\R\\j_atk_far\\up\\p43.bmp"
+
+R_X_ja3f                BITMAP                  "..\\res\\megaMan\\R\\j_atk_far\\down\\p44.bmp"
+
+R_X_ja4f                BITMAP                  "..\\res\\megaMan\\R\\j_atk_far\\down\\p45.bmp"
+
+R_X_ja0c                BITMAP                  "..\\res\\megaMan\\R\\j_atk_close\\77.bmp"
+
+R_X_ja1c                BITMAP                  "..\\res\\megaMan\\R\\j_atk_close\\78.bmp"
+
+R_X_ja2c                BITMAP                  "..\\res\\megaMan\\R\\j_atk_close\\79.bmp"
+
+R_X_ja3c                BITMAP                  "..\\res\\megaMan\\R\\j_atk_close\\80.bmp"
+
+R_X_ja4c                BITMAP                  "..\\res\\megaMan\\R\\j_atk_close\\81.bmp"
+
+R_X_ja5c                BITMAP                  "..\\res\\megaMan\\R\\j_atk_close\\82.bmp"
+
+R_X_ja6c                BITMAP                  "..\\res\\megaMan\\R\\j_atk_close\\83.bmp"
+
+R_X_ja7c                BITMAP                  "..\\res\\megaMan\\R\\j_atk_close\\84.bmp"
+
+R_X_ja8c                BITMAP                  "..\\res\\megaMan\\R\\j_atk_close\\85.bmp"
+
+R_X_ja9c                BITMAP                  "..\\res\\megaMan\\R\\j_atk_close\\86.bmp"
+
+R_X_ra0f                BITMAP                  "..\\res\\megaMan\\R\\m_atk_far\\p26.bmp"
+
+R_X_ra1f                BITMAP                  "..\\res\\megaMan\\R\\m_atk_far\\p27.bmp"
+
+R_X_ra2f                BITMAP                  "..\\res\\megaMan\\R\\m_atk_far\\p28.bmp"
+
+R_X_ra3f                BITMAP                  "..\\res\\megaMan\\R\\m_atk_far\\p29.bmp"
+
+R_X_ra4f                BITMAP                  "..\\res\\megaMan\\R\\m_atk_far\\p30.bmp"
+
+R_X_ra5f                BITMAP                  "..\\res\\megaMan\\R\\m_atk_far\\p31.bmp"
+
+R_X_ra6f                BITMAP                  "..\\res\\megaMan\\R\\m_atk_far\\p32.bmp"
+
+R_X_ra7f                BITMAP                  "..\\res\\megaMan\\R\\m_atk_far\\p33.bmp"
+
+R_X_ra8f                BITMAP                  "..\\res\\megaMan\\R\\m_atk_far\\p34.bmp"
+
+R_X_ra9f                BITMAP                  "..\\res\\megaMan\\R\\m_atk_far\\p35.bmp"
+
+X_a0                    BITMAP                  "..\\res\\megaMan\\Appearance\\p1.bmp"
+
+X_a1                    BITMAP                  "..\\res\\megaMan\\Appearance\\p2.bmp"
+
+X_a2                    BITMAP                  "..\\res\\megaMan\\Appearance\\p3.bmp"
+
+X_a3                    BITMAP                  "..\\res\\megaMan\\Appearance\\p4.bmp"
+
+X_a4                    BITMAP                  "..\\res\\megaMan\\Appearance\\p5.bmp"
+
+X_a5                    BITMAP                  "..\\res\\megaMan\\Appearance\\p6.bmp"
+
+X_a6                    BITMAP                  "..\\res\\megaMan\\Appearance\\p7.bmp"
+
+X_a7                    BITMAP                  "..\\res\\megaMan\\Appearance\\p8.bmp"
+
+X_Bullet0_0             BITMAP                  "..\\res\\megaMan\\R\\weapan\\b0.bmp"
+
+X_Bullet0_1             BITMAP                  "..\\res\\megaMan\\R\\weapan\\b1.bmp"
+
+X_Bullet0_2             BITMAP                  "..\\res\\megaMan\\R\\weapan\\b2.bmp"
+
+R_X_d0                  BITMAP                  "..\\res\\megaMan\\R\\death\\56.bmp"
+
+R_X_d1                  BITMAP                  "..\\res\\megaMan\\R\\death\\57.bmp"
+
+R_X_d2                  BITMAP                  "..\\res\\megaMan\\R\\death\\58.bmp"
+
+R_X_d3                  BITMAP                  "..\\res\\megaMan\\R\\death\\59.bmp"
+
+R_X_d4                  BITMAP                  "..\\res\\megaMan\\R\\death\\60.bmp"
+
+R_X_d5                  BITMAP                  "..\\res\\megaMan\\R\\death\\61.bmp"
+
+R_X_d6                  BITMAP                  "..\\res\\megaMan\\R\\death\\62.bmp"
+
+R_X_d7                  BITMAP                  "..\\res\\megaMan\\R\\death\\63.bmp"
+
+R_X_d8                  BITMAP                  "..\\res\\megaMan\\R\\death\\64.bmp"
+
+R_X_beAtk0              BITMAP                  "..\\res\\megaMan\\R\\damage\\64.bmp"
+
+R_X_beAtk1              BITMAP                  "..\\res\\megaMan\\R\\damage\\65.bmp"
+
+R_X_beAtk2              BITMAP                  "..\\res\\megaMan\\R\\damage\\66.bmp"
+
+X_charging0             BITMAP                  "..\\res\\megaMan\\effect\\L11.bmp"
+
+X_charging1             BITMAP                  "..\\res\\megaMan\\effect\\L12.bmp"
+
+X_charging2             BITMAP                  "..\\res\\megaMan\\effect\\L13.bmp"
+
+X_charging3             BITMAP                  "..\\res\\megaMan\\effect\\L14.bmp"
+
+X_charging4             BITMAP                  "..\\res\\megaMan\\effect\\L15.bmp"
+
+X_charging5             BITMAP                  "..\\res\\megaMan\\effect\\L21.bmp"
+
+X_charging6             BITMAP                  "..\\res\\megaMan\\effect\\L22.bmp"
+
+X_charging7             BITMAP                  "..\\res\\megaMan\\effect\\L23.bmp"
+
+X_charging8             BITMAP                  "..\\res\\megaMan\\effect\\L24.bmp"
+
+X_charging9             BITMAP                  "..\\res\\megaMan\\effect\\L25.bmp"
+
+R_X_dash0               BITMAP                  "..\\res\\megaMan\\R\\dash\\p56.bmp"
+
+R_X_dash1               BITMAP                  "..\\res\\megaMan\\R\\dash\\p57.bmp"
+
+R_X_dash_a0             BITMAP                  "..\\res\\megaMan\\R\\dash_atk\\p58.bmp"
+
+R_X_dash_a1             BITMAP                  "..\\res\\megaMan\\R\\dash_atk\\p59.bmp"
+
+energy_0                BITMAP                  "..\\res\\megaMan\\UI\\energy_0.bmp"
+
+energy_1                BITMAP                  "..\\res\\megaMan\\UI\\energy_1.bmp"
+
+energy_top              BITMAP                  "..\\res\\megaMan\\UI\\energy_top.bmp"
+
+energy1_0               BITMAP                  "..\\res\\megaMan\\UI\\energy1_0.bmp"
+
+energy1_1               BITMAP                  "..\\res\\megaMan\\UI\\energy1_1.bmp"
+
+energy1_button          BITMAP                  "..\\res\\megaMan\\UI\\energy1_button.bmp"
+
+energy2_button          BITMAP                  "..\\res\\megaMan\\UI\\energy2_button.bmp"
+
+energy3_button          BITMAP                  "..\\res\\megaMan\\UI\\energy3_button.bmp"
+
+X_charging10            BITMAP                  "..\\res\\megaMan\\effect\\L31.bmp"
+
+X_charging11            BITMAP                  "..\\res\\megaMan\\effect\\L32.bmp"
+
+X_charging12            BITMAP                  "..\\res\\megaMan\\effect\\L33.bmp"
+
+X_charging13            BITMAP                  "..\\res\\megaMan\\effect\\L34.bmp"
+
+X_charging14            BITMAP                  "..\\res\\megaMan\\effect\\L35.bmp"
+
+X_B0_hit0               BITMAP                  "..\\res\\megaMan\\R\\weapan\\h1.bmp"
+
+X_B0_hit1               BITMAP                  "..\\res\\megaMan\\R\\weapan\\h2.bmp"
+
+X_B0_hit2               BITMAP                  "..\\res\\megaMan\\R\\weapan\\h3.bmp"
+
+X_B0_hit3               BITMAP                  "..\\res\\megaMan\\R\\weapan\\h4.bmp"
+
+X_B0_hit4               BITMAP                  "..\\res\\megaMan\\R\\weapan\\h5.bmp"
+
+X_B0_hit5               BITMAP                  "..\\res\\megaMan\\R\\weapan\\h6.bmp"
+
+X_B0_hit6               BITMAP                  "..\\res\\megaMan\\R\\weapan\\h7.bmp"
+
+X_B0_hit7               BITMAP                  "..\\res\\megaMan\\R\\weapan\\h8.bmp"
+
+X_Bullet00_0            BITMAP                  "..\\res\\megaMan\\R\\weapan\\b00.bmp"
+
+X_nchB0_hit0            BITMAP                  "..\\res\\megaMan\\R\\weapan\\h9.bmp"
+
+X_nchB0_hit1            BITMAP                  "..\\res\\megaMan\\R\\weapan\\h10.bmp"
+
+X_nchB0_hit2            BITMAP                  "..\\res\\megaMan\\R\\weapan\\h11.bmp"
+
+m2                      BITMAP                  "..\\res\\m2.bmp"
+
+L_X_a0c                 BITMAP                  "..\\res\\megaMan\\L\\atk_close\\a0.bmp"
+
+L_X_a1c                 BITMAP                  "..\\res\\megaMan\\L\\atk_close\\a1.bmp"
+
+L_X_a2c                 BITMAP                  "..\\res\\megaMan\\L\\atk_close\\a2.bmp"
+
+L_X_a3c                 BITMAP                  "..\\res\\megaMan\\L\\atk_close\\a3.bmp"
+
+L_X_a4c                 BITMAP                  "..\\res\\megaMan\\L\\atk_close\\a4.bmp"
+
+L_X_a5c                 BITMAP                  "..\\res\\megaMan\\L\\atk_close\\a5.bmp"
+
+L_X_a6c                 BITMAP                  "..\\res\\megaMan\\L\\atk_close\\a6.bmp"
+
+L_X_a7c                 BITMAP                  "..\\res\\megaMan\\L\\atk_close\\a7.bmp"
+
+L_X_a8c                 BITMAP                  "..\\res\\megaMan\\L\\atk_close\\a8.bmp"
+
+L_X_a9c                 BITMAP                  "..\\res\\megaMan\\L\\atk_close\\a9.bmp"
+
+L_X_a0f                 BITMAP                  "..\\res\\megaMan\\L\\atk_far\\a0.bmp"
+
+L_X_a1f                 BITMAP                  "..\\res\\megaMan\\L\\atk_far\\a1.bmp"
+
+L_X_beatk0              BITMAP                  "..\\res\\megaMan\\L\\damage\\64.bmp"
+
+L_X_beatk1              BITMAP                  "..\\res\\megaMan\\L\\damage\\65.bmp"
+
+L_X_beatk2              BITMAP                  "..\\res\\megaMan\\L\\damage\\66.bmp"
+
+L_X_dash0               BITMAP                  "..\\res\\megaMan\\L\\dash\\p56.bmp"
+
+L_X_dash1               BITMAP                  "..\\res\\megaMan\\L\\dash\\p57.bmp"
+
+L_X_dash_a0             BITMAP                  "..\\res\\megaMan\\L\\dash_atk\\p58.bmp"
+
+L_X_dash_a1             BITMAP                  "..\\res\\megaMan\\L\\dash_atk\\p59.bmp"
+
+L_X_d0                  BITMAP                  "..\\res\\megaMan\\L\\death\\56.bmp"
+
+L_X_d1                  BITMAP                  "..\\res\\megaMan\\L\\death\\57.bmp"
+
+L_X_d2                  BITMAP                  "..\\res\\megaMan\\L\\death\\58.bmp"
+
+L_X_d3                  BITMAP                  "..\\res\\megaMan\\L\\death\\59.bmp"
+
+L_X_d4                  BITMAP                  "..\\res\\megaMan\\L\\death\\60.bmp"
+
+L_X_d5                  BITMAP                  "..\\res\\megaMan\\L\\death\\61.bmp"
+
+L_X_d6                  BITMAP                  "..\\res\\megaMan\\L\\death\\62.bmp"
+
+L_X_d7                  BITMAP                  "..\\res\\megaMan\\L\\death\\63.bmp"
+
+L_X_d8                  BITMAP                  "..\\res\\megaMan\\L\\death\\64.bmp"
+
+L_X_ja0c                BITMAP                  "..\\res\\megaMan\\L\\j_atk_close\\77.bmp"
+
+L_X_ja1c                BITMAP                  "..\\res\\megaMan\\L\\j_atk_close\\78.bmp"
+
+L_X_ja2c                BITMAP                  "..\\res\\megaMan\\L\\j_atk_close\\79.bmp"
+
+L_X_ja3c                BITMAP                  "..\\res\\megaMan\\L\\j_atk_close\\80.bmp"
+
+L_X_ja4c                BITMAP                  "..\\res\\megaMan\\L\\j_atk_close\\81.bmp"
+
+L_X_ja5c                BITMAP                  "..\\res\\megaMan\\L\\j_atk_close\\82.bmp"
+
+L_X_ja6c                BITMAP                  "..\\res\\megaMan\\L\\j_atk_close\\83.bmp"
+
+L_X_ja7c                BITMAP                  "..\\res\\megaMan\\L\\j_atk_close\\84.bmp"
+
+L_X_ja8c                BITMAP                  "..\\res\\megaMan\\L\\j_atk_close\\85.bmp"
+
+L_X_ja9c                BITMAP                  "..\\res\\megaMan\\L\\j_atk_close\\86.bmp"
+
+L_X_ja3f                BITMAP                  "..\\res\\megaMan\\L\\j_atk_far\\down\\p44.bmp"
+
+L_X_ja4f                BITMAP                  "..\\res\\megaMan\\L\\j_atk_far\\down\\p45.bmp"
+
+L_X_ja0f                BITMAP                  "..\\res\\megaMan\\L\\j_atk_far\\up\\p41.bmp"
+
+L_X_ja1f                BITMAP                  "..\\res\\megaMan\\L\\j_atk_far\\up\\p42.bmp"
+
+L_X_ja2f                BITMAP                  "..\\res\\megaMan\\L\\j_atk_far\\up\\p43.bmp"
+
+L_X_j0                  BITMAP                  "..\\res\\megaMan\\L\\jump\\j0.bmp"
+
+L_X_j1                  BITMAP                  "..\\res\\megaMan\\L\\jump\\j1.bmp"
+
+L_X_j2                  BITMAP                  "..\\res\\megaMan\\L\\jump\\j2.bmp"
+
+L_X_j3                  BITMAP                  "..\\res\\megaMan\\L\\jump\\j3.bmp"
+
+L_X_j4                  BITMAP                  "..\\res\\megaMan\\L\\jump\\j4.bmp"
+
+L_X_ra0f                BITMAP                  "..\\res\\megaMan\\L\\m_atk_far\\p26.bmp"
+
+L_X_ra1f                BITMAP                  "..\\res\\megaMan\\L\\m_atk_far\\p27.bmp"
+
+L_X_ra2f                BITMAP                  "..\\res\\megaMan\\L\\m_atk_far\\p28.bmp"
+
+L_X_ra3f                BITMAP                  "..\\res\\megaMan\\L\\m_atk_far\\p29.bmp"
+
+L_X_ra4f                BITMAP                  "..\\res\\megaMan\\L\\m_atk_far\\p30.bmp"
+
+L_X_ra5f                BITMAP                  "..\\res\\megaMan\\L\\m_atk_far\\p31.bmp"
+
+L_X_ra6f                BITMAP                  "..\\res\\megaMan\\L\\m_atk_far\\p32.bmp"
+
+L_X_ra7f                BITMAP                  "..\\res\\megaMan\\L\\m_atk_far\\p33.bmp"
+
+L_X_ra8f                BITMAP                  "..\\res\\megaMan\\L\\m_atk_far\\p34.bmp"
+
+L_X_ra9f                BITMAP                  "..\\res\\megaMan\\L\\m_atk_far\\p35.bmp"
+
+L_X_r1                  BITMAP                  "..\\res\\megaMan\\L\\run\\r1.bmp"
+
+L_X_r2                  BITMAP                  "..\\res\\megaMan\\L\\run\\r2.bmp"
+
+L_X_r3                  BITMAP                  "..\\res\\megaMan\\L\\run\\r3.bmp"
+
+L_X_r4                  BITMAP                  "..\\res\\megaMan\\L\\run\\r4.bmp"
+
+L_X_r5                  BITMAP                  "..\\res\\megaMan\\L\\run\\r5.bmp"
+
+L_X_r6                  BITMAP                  "..\\res\\megaMan\\L\\run\\r6.bmp"
+
+L_X_r7                  BITMAP                  "..\\res\\megaMan\\L\\run\\r7.bmp"
+
+L_X_r8                  BITMAP                  "..\\res\\megaMan\\L\\run\\r8.bmp"
+
+L_X_r9                  BITMAP                  "..\\res\\megaMan\\L\\run\\r9.bmp"
+
+L_X_r10                 BITMAP                  "..\\res\\megaMan\\L\\run\\r10.bmp"
+
+L_X_r11                 BITMAP                  "..\\res\\megaMan\\L\\run\\r11.bmp"
+
+L_X_s0                  BITMAP                  "..\\res\\megaMan\\L\\stand\\s0.bmp"
+
+L_X_s1                  BITMAP                  "..\\res\\megaMan\\L\\stand\\s1.bmp"
+
+L_X_s2                  BITMAP                  "..\\res\\megaMan\\L\\stand\\s2.bmp"
+
+LX_bulley00_0           BITMAP                  "..\\res\\megaMan\\L\\weapan\\b00.bmp"
+
+LX_bullet0_0            BITMAP                  "..\\res\\megaMan\\L\\weapan\\b0.bmp"
+
+LX_bullet0_1            BITMAP                  "..\\res\\megaMan\\L\\weapan\\b1.bmp"
+
+LX_bullet0_2            BITMAP                  "..\\res\\megaMan\\L\\weapan\\b2.bmp"
+
+LX_b0_hit0              BITMAP                  "..\\res\\megaMan\\L\\weapan\\h1.bmp"
+
+LX_b0_hit1              BITMAP                  "..\\res\\megaMan\\L\\weapan\\h2.bmp"
+
+LX_b0_hit2              BITMAP                  "..\\res\\megaMan\\L\\weapan\\h3.bmp"
+
+LX_b0_hit3              BITMAP                  "..\\res\\megaMan\\L\\weapan\\h4.bmp"
+
+LX_b0_hit4              BITMAP                  "..\\res\\megaMan\\L\\weapan\\h5.bmp"
+
+LX_b0_hit5              BITMAP                  "..\\res\\megaMan\\L\\weapan\\h6.bmp"
+
+LX_B0_hit6              BITMAP                  "..\\res\\megaMan\\L\\weapan\\h7.bmp"
+
+LX_b0_hit7              BITMAP                  "..\\res\\megaMan\\L\\weapan\\h8.bmp"
+
+LX_nchb0_hit0           BITMAP                  "..\\res\\megaMan\\L\\weapan\\h9.bmp"
+
+LX_nchb0_hit1           BITMAP                  "..\\res\\megaMan\\L\\weapan\\h10.bmp"
+
+LX_nchb0_hit2           BITMAP                  "..\\res\\megaMan\\L\\weapan\\h11.bmp"
+
+spacebar0               BITMAP                  "..\\res\\Space_bar0.bmp"
+
+spacebar1               BITMAP                  "..\\res\\Space_bar1.bmp"
+
+X_Bullet1_0             BITMAP                  "..\\res\\megaMan\\R\\weapan\\1_0.bmp"
+
+X_Bullet1_1             BITMAP                  "..\\res\\megaMan\\R\\weapan\\1_1.bmp"
+
+X_Bullet1_2             BITMAP                  "..\\res\\megaMan\\R\\weapan\\1_2.bmp"
+
+X_Bullet1_3             BITMAP                  "..\\res\\megaMan\\R\\weapan\\1_3.bmp"
+
+X_Bullet1_4             BITMAP                  "..\\res\\megaMan\\R\\weapan\\2_0.bmp"
+
+X_Bullet1_5             BITMAP                  "..\\res\\megaMan\\R\\weapan\\2_1.bmp"
+
+X_Bullet1_6             BITMAP                  "..\\res\\megaMan\\R\\weapan\\2_2.bmp"
+
+X_Bullet1_7             BITMAP                  "..\\res\\megaMan\\R\\weapan\\2_3.bmp"
+
+X_Bullet1_8             BITMAP                  "..\\res\\megaMan\\R\\weapan\\3_0.bmp"
+
+X_Bullet1_9             BITMAP                  "..\\res\\megaMan\\R\\weapan\\3_1.bmp"
+
+X_Bullet1_10            BITMAP                  "..\\res\\megaMan\\R\\weapan\\3_2.bmp"
+
+X_Bullet1_11            BITMAP                  "..\\res\\megaMan\\R\\weapan\\3_3.bmp"
+
+X_Bullet1_12            BITMAP                  "..\\res\\megaMan\\R\\weapan\\4_0.bmp"
+
+X_Bullet1_13            BITMAP                  "..\\res\\megaMan\\R\\weapan\\4_1.bmp"
+
+X_Bullet1_14            BITMAP                  "..\\res\\megaMan\\R\\weapan\\4_2.bmp"
+
+X_Bullet1_15            BITMAP                  "..\\res\\megaMan\\R\\weapan\\4_3.bmp"
+
+X_Bullet1_16            BITMAP                  "..\\res\\megaMan\\R\\weapan\\5_0.bmp"
+
+X_Bullet1_17            BITMAP                  "..\\res\\megaMan\\R\\weapan\\5_1.bmp"
+
+X_Bullet1_18            BITMAP                  "..\\res\\megaMan\\R\\weapan\\5_2.bmp"
+
+X_Bullet1_19            BITMAP                  "..\\res\\megaMan\\R\\weapan\\5_3.bmp"
+
+X_Bullet1_20            BITMAP                  "..\\res\\megaMan\\R\\weapan\\5.bmp"
+
+X_Bullet1_21            BITMAP                  "..\\res\\megaMan\\R\\weapan\\6.bmp"
+
+X_Bullet1_22            BITMAP                  "..\\res\\megaMan\\R\\weapan\\7.bmp"
+
+X_Bullet1_23            BITMAP                  "..\\res\\megaMan\\R\\weapan\\8.bmp"
+
+X_Bullet1_24            BITMAP                  "..\\res\\megaMan\\R\\weapan\\9.bmp"
+
+X_Bullet1_25            BITMAP                  "..\\res\\megaMan\\R\\weapan\\11.bmp"
+
+X_Bullet1_26            BITMAP                  "..\\res\\megaMan\\R\\weapan\\12.bmp"
+
+X_Bullet1_27            BITMAP                  "..\\res\\megaMan\\R\\weapan\\13.bmp"
+
+X_Bullet1_N             BITMAP                  "..\\res\\megaMan\\R\\weapan\\14.bmp"
+
+M2_0                    BITMAP                  "..\\res\\monster2\\R\\0.bmp"
+
+M2_1                    BITMAP                  "..\\res\\monster2\\R\\1.bmp"
+
+M2_2                    BITMAP                  "..\\res\\monster2\\R\\2.bmp"
+
+M2_3                    BITMAP                  "..\\res\\monster2\\R\\3.bmp"
+
+M2_4                    BITMAP                  "..\\res\\monster2\\R\\4.bmp"
+
+M2_5                    BITMAP                  "..\\res\\monster2\\R\\5.bmp"
+
+M2_6                    BITMAP                  "..\\res\\monster2\\R\\6.bmp"
+
+M2_7                    BITMAP                  "..\\res\\monster2\\R\\7.bmp"
+
+M2_8                    BITMAP                  "..\\res\\monster2\\R\\8.bmp"
+
+M2_9                    BITMAP                  "..\\res\\monster2\\R\\9.bmp"
+
+M2_10                   BITMAP                  "..\\res\\monster2\\R\\10.bmp"
+
+M2_11                   BITMAP                  "..\\res\\monster2\\R\\11.bmp"
+
+M2_12                   BITMAP                  "..\\res\\monster2\\R\\12.bmp"
+
+M2_13                   BITMAP                  "..\\res\\monster2\\R\\13.bmp"
+
+M2_14                   BITMAP                  "..\\res\\monster2\\R\\14.bmp"
+
+M2_15                   BITMAP                  "..\\res\\monster2\\R\\15.bmp"
+
+M2_16                   BITMAP                  "..\\res\\monster2\\R\\16.bmp"
+
+M2_17                   BITMAP                  "..\\res\\monster2\\R\\17.bmp"
+
+LM2_0                   BITMAP                  "..\\res\\monster2\\L\\0.bmp"
+
+LM2_1                   BITMAP                  "..\\res\\monster2\\L\\1.bmp"
+
+LM2_2                   BITMAP                  "..\\res\\monster2\\L\\2.bmp"
+
+LM2_3                   BITMAP                  "..\\res\\monster2\\L\\3.bmp"
+
+LM2_4                   BITMAP                  "..\\res\\monster2\\L\\4.bmp"
+
+LM2_5                   BITMAP                  "..\\res\\monster2\\L\\5.bmp"
+
+LM2_6                   BITMAP                  "..\\res\\monster2\\L\\6.bmp"
+
+LM2_7                   BITMAP                  "..\\res\\monster2\\L\\7.bmp"
+
+LM2_8                   BITMAP                  "..\\res\\monster2\\L\\8.bmp"
+
+LM2_9                   BITMAP                  "..\\res\\monster2\\L\\9.bmp"
+
+LM2_10                  BITMAP                  "..\\res\\monster2\\L\\10.bmp"
+
+LM2_11                  BITMAP                  "..\\res\\monster2\\L\\11.bmp"
+
+LM2_12                  BITMAP                  "..\\res\\monster2\\L\\12.bmp"
+
+LM2_13                  BITMAP                  "..\\res\\monster2\\L\\13.bmp"
+
+LM2_14                  BITMAP                  "..\\res\\monster2\\L\\14.bmp"
+
+LM2_15                  BITMAP                  "..\\res\\monster2\\L\\15.bmp"
+
+LM2_16                  BITMAP                  "..\\res\\monster2\\L\\16.bmp"
+
+LM2_17                  BITMAP                  "..\\res\\monster2\\L\\17.bmp"
+
+hp2_button              BITMAP                  "..\\res\\megaMan\\UI\\hp2_button.bmp"
+
+help00                  BITMAP                  "..\\res\\help0.bmp"
+
+Mesg01                  BITMAP                  "..\\res\\UI\\mesb0.bmp"
+
+Mesg02                  BITMAP                  "..\\res\\UI\\mesb1.bmp"
+
+Mesg03                  BITMAP                  "..\\res\\UI\\mesb2.bmp"
+
+Mesg04                  BITMAP                  "..\\res\\UI\\mesb3.bmp"
+
+Mesg05                  BITMAP                  "..\\res\\UI\\mesb4.bmp"
+
+Mesg06                  BITMAP                  "..\\res\\UI\\mesb5.bmp"
+
+Mesg07                  BITMAP                  "..\\res\\UI\\mesb6.bmp"
+
+Mesg08                  BITMAP                  "..\\res\\UI\\mesb7.bmp"
+
+Mesg09                  BITMAP                  "..\\res\\UI\\mesb8.bmp"
+
+Mesg10                  BITMAP                  "..\\res\\UI\\mesb9.bmp"
+
+Mesg11                  BITMAP                  "..\\res\\UI\\mesb10.bmp"
+
+Mesg12                  BITMAP                  "..\\res\\UI\\mesb11.bmp"
+
+Mesg13                  BITMAP                  "..\\res\\UI\\mesb12.bmp"
+
+Mesg14                  BITMAP                  "..\\res\\UI\\mesb13.bmp"
+
+Mesg15                  BITMAP                  "..\\res\\UI\\mesb14.bmp"
+
+Mesg16                  BITMAP                  "..\\res\\UI\\mesb15.bmp"
+
+Mesg17                  BITMAP                  "..\\res\\UI\\mesb16.bmp"
+
+Mesg18                  BITMAP                  "..\\res\\UI\\mesb17.bmp"
+
+Mesg19                  BITMAP                  "..\\res\\UI\\mesb18.bmp"
+
+Mesg20                  BITMAP                  "..\\res\\UI\\mesb19.bmp"
+
+Mesg21                  BITMAP                  "..\\res\\UI\\mesb20.bmp"
+
+Mesg22                  BITMAP                  "..\\res\\UI\\mesb21.bmp"
+
+Mesg23                  BITMAP                  "..\\res\\UI\\mesb22.bmp"
+
+Mesg24                  BITMAP                  "..\\res\\UI\\mesb23.bmp"
+
+Mesg25                  BITMAP                  "..\\res\\UI\\mesb24.bmp"
+
+clear0                  BITMAP                  "..\\res\\UI\\c0.bmp"
+
+clear1                  BITMAP                  "..\\res\\UI\\c1.bmp"
+
+clear2                  BITMAP                  "..\\res\\UI\\c2.bmp"
+
+clear4                  BITMAP                  "..\\res\\UI\\c3.bmp"
 
 
 /////////////////////////////////////////////////////////////////////////////

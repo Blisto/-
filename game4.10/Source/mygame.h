@@ -39,7 +39,6 @@
 */
 
 #include"Map.h"
-//#include"CGameCharacter.h"
 
 namespace game_framework {
 	/////////////////////////////////////////////////////////////////////////////
@@ -47,9 +46,35 @@ namespace game_framework {
 	/////////////////////////////////////////////////////////////////////////////
 
 	enum AUDIO_ID {				// 定義各種音效的編號
-		AUDIO_DING,				// 0
-		AUDIO_LAKE,				// 1
-		AUDIO_NTUT				// 2
+		AUDIO_BGM,
+		AUDIO_X,				//X登場音效
+		AUDIO_BOSS,				//BOSS登場音效
+		AUDIO_BOSS_ATK5,
+		AUDIO_CHOOSE,
+		AUDIO_X_ATK0_HIGHLEVEL,
+		AUDIO_X_ATK1_HIGHLEVEL,
+		AUDIO_X_ATK0_NORMALHLEVEL,
+		AUDIO_X_ATK1_NORMALHLEVEL,
+		AUDIO_X_DASH,
+		AUDIO_X_JUMP,
+		AUDIO_X_ATK_HITTED,
+		AUDIO_X_StartCharge,
+		AUDIO_X_Charge,
+		AUDIO_DAMAGED,
+		AUDIO_X_DEATH,
+		AUDIO_BOSS_ATK4,
+		AUDIO_CLOSE_HITTED,
+		AUDIO_CLOSE_MISSED,
+		AUDIO_MESG_NEXT,
+		AUDIO_ARTHUR_SHOOTATK,
+		AUDIO_GAMEOVER,
+		AUDIO_MENU,
+		AUDIO_IAMGUNDAM,
+		AUDIO_CHORD,
+		AUDIO_CATVOICE1,
+		AUDIO_CATVOICE2,
+		AUDIO_CLEAR,
+		AUDIO_CLEAR_BGM
 	};
 
 	/////////////////////////////////////////////////////////////////////////////
@@ -68,6 +93,8 @@ namespace game_framework {
 		void OnShow();									// 顯示這個狀態的遊戲畫面
 	private:
 		CAnimation menu[3];
+		CMovingBitmap helpBitmap;
+		bool helpOpen;
 		int option;
 	};
 
@@ -98,9 +125,7 @@ namespace game_framework {
 		CMovingBitmap	help;		// 說明圖
 		CMovingBitmap	corner;		// 角落圖
 		CInteger		hits_left;	// 剩下的撞擊數
-		//CMap MAP;
 		Map *Newmap;
-		int speed;
 		int jumpTime;
 		int counter;
 	};

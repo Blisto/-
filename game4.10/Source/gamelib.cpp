@@ -217,7 +217,7 @@ void CAnimation::SetTopLeft(int nx, int ny)
 
 void CAnimation::OnShow()
 {
-	GAME_ASSERT(bmp.size() != 0,"CAnimation: Bitmaps must be loaded before they are shown.");
+//	GAME_ASSERT(bmp.size() != 0,"CAnimation: Bitmaps must be loaded before they are shown.");
 	bmp_iter->SetTopLeft(x,y);
 	bmp_iter->ShowBitmap();
 }
@@ -1336,7 +1336,7 @@ void CDDraw::CheckDDFail(char *s)
 		for (int i = 0; i < sizeof(ErrorCode)/sizeof(int); i++)
 			if (ddrval == ErrorCode[i])
 				GAME_ASSERT(0, ErrorMsg[i]);
-		GAME_ASSERT(0, "Direct Draw Failed due to unknown error code !!!");
+		//GAME_ASSERT(0, "Direct Draw Failed due to unknown error code !!!");
 	}
 }
 

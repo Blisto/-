@@ -123,21 +123,6 @@
     <ClCompile Include="Source\mygame.cpp">
       <Filter>MyGame</Filter>
     </ClCompile>
-    <ClCompile Include="Source\CEraser.cpp">
-      <Filter>MyGame</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\CBall.cpp">
-      <Filter>MyGame</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\CBouncingBall.cpp">
-      <Filter>MyGame</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\CMap.cpp">
-      <Filter>MyGame</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\CGameCharacter.cpp">
-      <Filter>MyGame</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Character.cpp">
       <Filter>MyGame</Filter>
     </ClCompile>
@@ -145,6 +130,7 @@
       <Filter>MyGame</Filter>
     </ClCompile>
     <ClCompile Include="Source\mesageBox.cpp" />
+    <ClCompile Include="Source\Elementalattack.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\audio.h">
@@ -174,21 +160,6 @@
     <ClInclude Include="Source\mygame.h">
       <Filter>MyGame</Filter>
     </ClInclude>
-    <ClInclude Include="Source\CEraser.h">
-      <Filter>MyGame</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\CBall.h">
-      <Filter>MyGame</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\CBouncingBall.h">
-      <Filter>MyGame</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\CMap.h">
-      <Filter>MyGame</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\CGameCharacter.h">
-      <Filter>MyGame</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Character.h">
       <Filter>MyGame</Filter>
     </ClInclude>
@@ -196,6 +167,7 @@
       <Filter>MyGame</Filter>
     </ClInclude>
     <ClInclude Include="Source\mesageBox.h" />
+    <ClInclude Include="Source\Elementalattack.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Source\game.rc">
@@ -748,6 +720,861 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="RES\megaMan\R\atk_close\a3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\pics\站\p8.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\atk_close\a4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\atk_close\a5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\atk_close\a6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\atk_close\a7.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\atk_close\a8.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\atk_close\a9.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\j_atk_far\up\p41.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\j_atk_far\up\p42.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\j_atk_far\up\p43.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\j_atk_far\down\p44.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\j_atk_far\down\p45.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\j_atk_close\77.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\j_atk_close\78.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\j_atk_close\79.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\j_atk_close\80.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\j_atk_close\81.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\j_atk_close\82.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\j_atk_close\83.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\j_atk_close\84.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\j_atk_close\85.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\j_atk_close\86.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\m_atk_far\p26.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\m_atk_far\p27.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\m_atk_far\p28.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\m_atk_far\p29.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\m_atk_far\p30.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\m_atk_far\p31.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\m_atk_far\p32.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\m_atk_far\p33.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\m_atk_far\p34.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\m_atk_far\p35.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\Appearance\p1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\Appearance\p2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\Appearance\p3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\Appearance\p4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\Appearance\p5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\Appearance\p6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\Appearance\p7.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\Appearance\p8.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\b0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\b1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\b2_Hit.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\death\56.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\death\57.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\death\58.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\death\59.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\death\60.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\death\61.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\death\62.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\death\63.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\death\64.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\damage\64.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\damage\65.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\damage\66.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\effect\L11.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\effect\L12.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\effect\L13.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\effect\L14.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\effect\L15.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\effect\L21.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\effect\L22.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\effect\L23.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\effect\L24.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\effect\L25.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\dash\p56.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\dash\p57.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\dash_atk\p58.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\dash_atk\p59.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\UI\energy1_0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\UI\energy1_1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\UI\energy1_button.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\UI\energy2_button.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\UI\energy3_button.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\UI\energy_0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\UI\energy_1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\UI\energy_top.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\effect\L31.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\effect\L32.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\effect\L33.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\effect\L34.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\effect\L35.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\megaMan\R\weapan\b2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\h1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\h2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\h3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\h4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\h5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\h6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\h7.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\h8.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\b00.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\h9.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\h10.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\h11.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\m2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\atk_close\a0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\atk_close\a1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\atk_close\a2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\atk_close\a3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\atk_close\a4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\atk_close\a5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\atk_close\a6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\atk_close\a7.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\atk_close\a8.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\atk_close\a9.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\atk_far\a0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\atk_far\a1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\damage\64.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\damage\65.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\damage\66.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\dash\p56.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\dash\p57.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\dash_atk\p58.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\dash_atk\p59.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\death\56.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\death\57.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\death\58.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\death\59.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\death\60.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\death\61.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\death\62.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\death\63.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\death\64 - 複製.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\death\64.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\j_atk_close\77.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\j_atk_close\78.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\j_atk_close\79.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\j_atk_close\80.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\j_atk_close\81.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\j_atk_close\82.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\j_atk_close\83.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\j_atk_close\84.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\j_atk_close\85.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\j_atk_close\86.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\j_atk_far\down\p44.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\j_atk_far\down\p45.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\j_atk_far\up\p41.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\j_atk_far\up\p42.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\j_atk_far\up\p43.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\jump\j0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\jump\j1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\jump\j2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\jump\j3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\jump\j4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\m_atk_far\p26.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\m_atk_far\p27.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\m_atk_far\p28.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\m_atk_far\p29.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\m_atk_far\p30.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\m_atk_far\p31.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\m_atk_far\p32.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\m_atk_far\p33.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\m_atk_far\p34.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\m_atk_far\p35.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\run\r1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\run\r2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\run\r3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\run\r4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\run\r5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\run\r6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\run\r7.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\run\r8.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\run\r9.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\run\r10.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\run\r11.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\stand\s0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\stand\s1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\stand\s2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\weapan\b00.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\weapan\b0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\weapan\b1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\weapan\b2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\weapan\h1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\weapan\h2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\weapan\h3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\weapan\h4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\weapan\h5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\weapan\h6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\weapan\h7.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\weapan\h8.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\weapan\h9.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\weapan\h10.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\L\weapan\h11.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\Space_bar0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\Space_bar1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\1_0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\1_1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\1_2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\1_3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\2_0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\2_1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\2_2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\2_3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\3_0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\3_1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\3_2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\3_3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\4_0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\4_1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\4_2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\4_3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\5_0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\5_1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\5_2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\5_3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\7.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\8.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\9.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\11.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\12.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\13.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\R\weapan\14.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\R\0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\R\1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\R\2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\R\3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\R\4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\R\5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\R\6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\R\7.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\R\8.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\R\9.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\R\10.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\R\11.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\R\12.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\R\13.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\R\14.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\R\15.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\R\16.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\R\17.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\L\0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\L\1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\L\2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\L\3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\L\4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\L\5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\L\6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\L\7.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\L\8.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\L\9.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\L\10.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\L\11.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\L\12.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\L\13.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\L\14.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\L\15.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\L\16.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\monster2\L\17.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\megaMan\UI\hp2_button.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\m2_1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\help0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesb0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesb1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesb2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesb3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesb4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesb5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesb6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesb7.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesb8.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesb9.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesb10.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesb11.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesb12.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesb13.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesb14.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesb15.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesb16.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesb17.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesb18.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesb19.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesb20.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesb21.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesb22.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesb23.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\mesb24.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\RES\UI\mesb10.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\RES\UI\mesb11.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\c0.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\c1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\c2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="RES\UI\c3.bmp">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

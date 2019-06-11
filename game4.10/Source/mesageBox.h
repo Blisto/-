@@ -6,16 +6,18 @@ namespace game_framework {
 		~mesageBox();
 		void LoadBitmap();
 		void nextPage();
+		void setHint(bool flag);
 		bool isFinal();
 		void openMesgBox(bool flag);
 		bool getOpen();
-		void OnMove();
+		void OnMove(int mapN);
 		void OnShow();
 	private:
-		CAnimation mesg[10];
-		int x, y;
+		CAnimation mesg[10],spaceBar;
+		CMovingBitmap mesg_map2[25];
+		int x, y,mapNum;
 		int page,time;
-		bool open;
+		bool open,isHint;
 	};
 
 }
